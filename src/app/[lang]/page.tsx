@@ -9,8 +9,8 @@ import OurTeam from "@/components/ourteam/page";
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
 
-export default async function Home({ children,
-  params }: Readonly<{ children: React.ReactNode, params: ParamsLocale }>) {
+export default async function Home({
+  params }: { params: ParamsLocale }) {
     const {lang} = await params;
   
     const dir = lang === 'ar' ? 'rtl' : 'ltr'
