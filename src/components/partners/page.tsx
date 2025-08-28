@@ -7,6 +7,10 @@ import { useParams } from "next/navigation";
 
 
 export default function Partners({ dict }: { dict: any }) {
+
+    const { lang } = useParams() as { lang?: string };
+    const isArabic = lang === "ar";
+    
     const partners = [
         {
             name : "alrajhi2",
@@ -42,8 +46,6 @@ export default function Partners({ dict }: { dict: any }) {
         },
     ]
 
-    const { lang } = useParams() as { lang?: string };
-    const isArabic = lang === "ar";
 
     return (
         <section className='mb-10'>
