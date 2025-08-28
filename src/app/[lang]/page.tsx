@@ -57,7 +57,7 @@ export default async function Home({ children,
 
       {/* Partners Tools section */}
       <div>
-      <PartnersTools dict={dict}/>
+      <PartnersTools />
       </div>
       {/* Partners Tools section */}
 
