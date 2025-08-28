@@ -382,7 +382,7 @@ const team = [
   },
   {
     name: "Abdelrahman Ahmed",
-    title: "BackEnd",
+    title: "Full Stack",
     img: "/images/team/abdelrahman.png",
   },
   { name: "Ahmed Ismael", 
