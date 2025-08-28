@@ -1,0 +1,84 @@
+
+
+{
+    "navbar_home": "الرئيسية",
+    "navbar_about": "من نحن",
+    "navbar_service": "الخدمات",
+    "navbar_pricing": "الأسعار",
+    "navbar_team": "الفريق",
+    "navbar_contact": "اتصل بنا",
+
+    "navbar_login_ar" : "تسجيل الدخول",
+    "navbar_register_ar" : "تسجيل",
+  
+    "hero_title": "تطبيق الرئيس التنفيذي",
+    "hero_subtitle": "أول وأفضل تطبيق في الشرق الأوسط للمدراء التنفيذيين.",
+    "hero_button": "اشترك الآن",
+  
+    "who_title": "من نحن",
+    "who_description_ar": "يقدم خلابة تجربة فريدة للشركات من خلال تطبيق حديث لتبسيط التحكم، وحلول الأعمال، وإدارة الأعمال الديناميكية بشكل عالي — مما يتيح إنجاز المهام بسرعة وسهولة في التنقل.",
+    "who_button_more_ar": "المزيد",
+    "who_button_less_ar": "أقل",
+  
+    "for_ceo_title": "للرئيس التنفيذي",
+    "for_ceo_subtitle": "استمتع بإدارة عملك",
+    "for_ceo_features": "سمات",
+    "for_ceo_subtitle2": "مجموعة غنية من الأدوات التي توفر تجربة إدارة استثنائية",
+    "for_ceo_card": "إدارة المشروع",
+  
+    "advantage_title_ar": "مميزات تطبيقنا",
+    "advantage_text_ar": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة والتنضيد. نوفر لك حلولاً مرنة تساعدك على إنجاز أعمالك بسهولة وفعالية.",
+    "advantage_button_more_ar": "المزيد",
+    "advantage_button_less_ar": "أقل",
+  
+    "pricing_title_ar": "خطط الأسعار",
+    "pricing_subtitle_ar": {
+      "text": "اختر الحزمة التي تناسب عدد الموظفين الخاص بك. احصل على",
+      "highlight": "خصم 10 ٪",
+      "after": "على الاشتراكات السنوية"
+    },
+    "pricing_button_monthly_ar" : "شهري",
+    "pricing_button_yearly_ar" : "سنويا (خصم 10 ٪)",
+    "pricing_emp_ar" : "الموظف",
+    "pricing_dollar_icon_ar" : "دولار",
+    "pricing_per_employee_ar": "لكل موظف",
+    "pricing_subscribe_ar": "إشترك الان",
+    
+  
+    "partners_title_ar": "شركاء النجاح",
+  
+    "team_title_ar": "فريقنا",
+    
+    
+    
+    "footer_company_name_ar": "شركة شريدة لتكنولوجيا المعلومات",
+    "footer_sitemap_ar": "خريطة الموقع",
+    "footer_policies_ar": "السياسات",
+    "footer_download_ar": "حمل التطبيق",
+    "footer_certificate_maaroof_ar": "شهادة معروف",
+    "footer_rights": "جميع الحقوق محفوظة © 2025 تطبيق الرئيس التنفيذي",
+
+    "footer_address_ar" : " 2468 رقم المبنى، شارع الصحابة، حي المونسية، الرقم الفرعي 6763، الرمز البريدي 13255 الرياض - المملكة العربية السعودية",
+    "footer_location_ar" : "الموقع",
+    "footer_email_ar" : "الايميل",
+
+    "footer_about_ar" : "من نحن",
+    "footer_careers_ar" : "وظائف",
+    "footer_brand_center_ar" : "مركز العلامة التجارية",
+    "footer_blog_ar" : "مدونات",
+
+    "footer_privacy_ar" : "سياسة الخصوصية",
+    "footer_licensing_ar" : "الترخيص",
+    "footer_terms_ar" : "الشروط والأحكام",
+
+    "footer_company_ar" : "إحدي منتجات شركة شريدة",
+
+    "footer_rights_ar" : "جميع الحقوق محفوظة لشركة شريدة ",
+
+    "section_whatsapp_ar" : "تواصل معنا",
+    "section_whatsapp_hover_ar" : "واتس أب"
+
+   
+
+  }
+  

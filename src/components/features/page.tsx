@@ -1,0 +1,236 @@
+
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faEarthEurope,
+//   faFileInvoiceDollar,
+//   faListCheck,
+//   faMugHot,
+//   faPeopleRoof,
+// } from "@fortawesome/free-solid-svg-icons";
+// import React from "react";
+// import Image from "next/image";
+
+// export default function Features({dict} : {dict: any}) {
+//   const features = [
+//     {
+//       id: 1,
+//       icon: "/images/features/project_management.png",
+//       title_en: "Project Management",
+//       title_ar: "إدارة المشاريع",
+//       description_en: "Plan, organize, and track projects efficiently with tasks, milestones, and real-time progress updates.",
+//       description_ar: "خطط ونظم وتابع المشاريع بفعالية باستخدام المهام والمعالم ومتابعة التقدم في الوقت الحقيقي."
+//     },
+//     {
+//       id: 2,
+//       icon: "/images/features/accounting.png",
+//       title_en: "Accounting",
+//       title_ar: "المحاسبة",
+//       description_en: "Manage invoices, expenses, payroll, and financial reports all in one place with ease.",
+//       description_ar: "إدارة الفواتير والمصاريف والرواتب والتقارير المالية في مكان واحد وبسهولة."
+//     },
+//     {
+//       id: 3,
+//       icon: "/images/features/hr.png",
+//       title_en: "HR",
+//       title_ar: "الموارد البشرية",
+//       description_en: "Streamline employee records, attendance, recruitment, and performance evaluations.",
+//       description_ar: "تبسيط سجلات الموظفين والحضور والتوظيف وتقييم الأداء."
+//     },
+//     {
+//       id: 4,
+//       icon: "/images/features/website_management.png",
+//       title_en: "Website Management",
+//       title_ar: "إدارة الموقع الإلكتروني",
+//       description_en: "Easily update and manage website content, media, and analytics without technical hassle.",
+//       description_ar: "تحديث وإدارة محتوى الموقع والوسائط والتحليلات بسهولة ودون عناء تقني."
+//     },
+//     {
+//       id: 5,
+//       icon: "/images/features/buffet.png",
+//       title_en: "Buffet",
+//       title_ar: "بوفيه",
+//       description_en: "Organize cafeteria menus, manage orders, and provide employees with seamless meal services.",
+//       description_ar: "تنظيم قوائم الكافيتيريا، إدارة الطلبات، وتوفير خدمات وجبات سلسة للموظفين."
+//     },
+//   ];
+  
+  
+
+//   return (
+//     <section className="px-5 md:px-20 lg:px-40" data-aos="fade-up">
+//       <div className="mb-10 text-center md:text-left">
+//         <h2 className="text-3xl sm:text-5xl md:text-6xl text-primary font-bold mb-4">
+//         {dict.for_ceo_title}
+//         </h2>
+//         <h4 className="text-lg sm:text-2xl md:text-4xl">
+//         {dict.for_ceo_subtitle}
+//         </h4>
+//       </div>
+
+//       <div className="bg-[#ae9c56] p-5 sm:p-10 rounded-3xl relative text-black">
+//       <div className="bg-[#d2be6f] -rotate-90 absolute top-20 -left-17 p-2 hidden lg:block">
+//       {dict.for_ceo_features}
+//         </div>
+
+//         <div className="mb-10">
+//           <h3 className="text-lg sm:text-2xl md:text-3xl">
+//           {dict.for_ceo_subtitle2}
+//           </h3>
+//         </div>
+
+//         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-10">
+//   {features.map((feature) => (
+//     <div
+//       key={feature.id}
+//       className="w-full ring-2 ring-white bg-gradient-to-br from-[#c0af6c] to-[#cebe7d] 
+//                  text-secondary rounded-3xl p-5 sm:p-10 flex gap-5 
+//                  hover:scale-105 transition-all duration-700"
+//     >
+//       <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 text-slate-900">
+//         <Image
+//           src={feature.icon}
+//           alt={dict.lang === 'ar' ? feature.title_ar : feature.title_en}
+//           width={64}
+//           height={64}
+//           className="object-contain"
+//         />
+//       </div>
+//       <div>
+//       <h3 className="text-xl sm:text-xl md:text-shadow-md mb-3 text-secondary break-words">
+//       {dict.lang === 'ar' ? feature.title_ar : feature.title_en}
+//     </h3>
+//     <p className="text-sm sm:text-base">
+//       {dict.lang === 'ar' ? feature.description_ar : feature.description_en}
+//     </p>
+//       </div>
+//     </div>
+//   ))}
+// </div>
+
+//       </div>
+//     </section>
+//   );
+// }
+
+
+'use client';
+
+import React from "react";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+
+interface Feature {
+  id: number;
+  icon: string;
+  title_en: string;
+  title_ar: string;
+  description_en: string;
+  description_ar: string;
+}
+
+interface FeaturesProps {
+  dict?: Record<string, string>;
+}
+
+export default function Features({ dict }: FeaturesProps) {
+  const { lang } = useParams() as { lang?: string };
+  const isArabic = lang === 'ar';
+
+  const features: Feature[] = [
+    {
+      id: 1,
+      icon: "/images/features/project_management.png",
+      title_en: "Project Management",
+      title_ar: "إدارة المشاريع",
+      description_en: "Plan, organize, and track projects efficiently with tasks, milestones, and real-time progress updates.",
+      description_ar: "خطط ونظم وتابع المشاريع بفعالية باستخدام المهام والمعالم ومتابعة التقدم في الوقت الحقيقي."
+    },
+    {
+      id: 2,
+      icon: "/images/features/accounting.png",
+      title_en: "Accounting",
+      title_ar: "المحاسبة",
+      description_en: "Manage invoices, expenses, payroll, and financial reports all in one place with ease.",
+      description_ar: "إدارة الفواتير والمصاريف والرواتب والتقارير المالية في مكان واحد وبسهولة."
+    },
+    {
+      id: 3,
+      icon: "/images/features/hr.png",
+      title_en: "HR",
+      title_ar: "الموارد البشرية",
+      description_en: "Streamline employee records, attendance, recruitment, and performance evaluations.",
+      description_ar: "تبسيط سجلات الموظفين والحضور والتوظيف وتقييم الأداء."
+    },
+    {
+      id: 4,
+      icon: "/images/features/website_management.png",
+      title_en: "Website Management",
+      title_ar: "إدارة الموقع الإلكتروني",
+      description_en: "Easily update and manage website content, media, and analytics without technical hassle.",
+      description_ar: "تحديث وإدارة محتوى الموقع والوسائط والتحليلات بسهولة ودون عناء تقني."
+    },
+    {
+      id: 5,
+      icon: "/images/features/buffet.png",
+      title_en: "Buffet",
+      title_ar: "بوفيه",
+      description_en: "Organize cafeteria menus, manage orders, and provide employees with seamless meal services.",
+      description_ar: "تنظيم قوائم الكافيتيريا، إدارة الطلبات، وتوفير خدمات وجبات سلسة للموظفين."
+    },
+  ];
+
+  return (
+    <section className="px-5 md:px-20 lg:px-40" data-aos="fade-up">
+      <div className="mb-10 text-center md:text-left">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl text-primary font-bold mb-4">
+          {dict?.for_ceo_title || (isArabic ? "ميزات للمدراء التنفيذيين" : "Features for CEOs")}
+        </h2>
+        <h4 className="text-lg sm:text-2xl md:text-4xl">
+          {dict?.for_ceo_subtitle || (isArabic ? "أدوات إدارة الأعمال الشاملة" : "Comprehensive business management tools")}
+        </h4>
+      </div>
+
+      <div className="bg-[#ae9c56] p-5 sm:p-10 rounded-3xl relative text-black">
+        <div 
+          className="bg-[#d2be6f] -rotate-90 absolute top-20 p-2 hidden lg:block"
+          style={{ left: '-68px' }}
+        >
+          {dict?.for_ceo_features || (isArabic ? "الميزات" : "Features")}
+        </div>
+
+        <div className="mb-10">
+          <h3 className="text-lg sm:text-2xl md:text-3xl">
+            {dict?.for_ceo_subtitle2 || (isArabic ? "كل ما تحتاجه لإدارة أعمالك" : "Everything you need to manage your business")}
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-10">
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className="w-full ring-2 ring-white bg-gradient-to-br from-[#c0af6c] to-[#cebe7d] text-secondary rounded-3xl p-5 sm:p-10 flex gap-5 hover:scale-105 transition-all duration-700"
+            >
+              <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 text-slate-900">
+                <Image
+                  src={feature.icon}
+                  alt={isArabic ? feature.title_ar : feature.title_en}
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl sm:text-xl md:text-shadow-md mb-3 text-secondary break-words">
+                  {isArabic ? feature.title_ar : feature.title_en}
+                </h3>
+                <p className="text-sm sm:text-base">
+                  {isArabic ? feature.description_ar : feature.description_en}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

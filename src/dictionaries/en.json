@@ -1,0 +1,79 @@
+{
+    "navbar_home": "Home",
+    "navbar_about": "About",
+    "navbar_service": "Services",
+    "navbar_pricing": "Pricing",
+    "navbar_team": "Team",
+    "navbar_contact": "Contact",
+
+    "navbar_login": "Log in" ,
+    "navbar_register" : "Register",
+  
+    "hero_title": "CEO APP",
+    "hero_subtitle": "The first and leading application in the Middle East for CEO.",
+    "hero_button": "Subscribe Now",
+  
+    "who_title": "WHO ARE WE",
+    "who_description": "Khalids offers a unique experience for businesses through a modern application to streamline control, business solutions, and highly dynamic business management — enabling faster task completion and hassle-free navigation.",
+    "who_button_more": "More",
+    "who_button_less": "Less",
+  
+    "for_ceo_title": "FOR CEO",
+    "for_ceo_subtitle": "Enjoy managing your work",
+  
+    "advantage_title": "ADVANTAGE FROM OUR APP",
+    "advantage_text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Maecenas vitae tempor odio. Etiam a facilisis ex. Donec et sapien eget lorem viverra aliquam ac eu metus. Phasellus consequat nisi in est aliquam accumsan.",
+    "advantage_button_more": "More",
+    "advantage_button_less": "Less",
+  
+    "pricing_title": "Pricing Plans",
+    "pricing_subtitle": {
+    "text": "Choose the package that fits your number of employees. Get a",
+    "highlight": "10% discount",
+    "after": "on yearly subscriptions."
+    },
+    "pricing_button_monthly" : "Monthly",
+    "pricing_button_yearly" : "Yearly (10% Discount)",
+    "pricing_emp" : "Employee",
+    "pricing_dollar_icon" : "$",
+    "pricing_per_employee": "per employee",
+    "pricing_subscribe": "Subscribe Now",
+    
+  
+    "partners_title": "OUR SUCCESS PARTNERS",
+  
+    "team_title": "Our Team",
+  
+    
+ 
+    
+
+    "footer_company_name": "Sharida Information Technology Company",
+    "footer_sitemap": "Sitemap",
+    "footer_policies": "Policies",
+    "footer_download": "Download",
+    "footer_certificate_maaroof": "Certificate Maaroof",
+ 
+
+    "footer_address" : "2468 Al Sahabah St. Al Munisiyah Dist., Unit No. 6763, Riyadh 13255 RiyadhKingdom of Saudi Arabia.",
+    "footer_location" : "Location",
+    "footer_email" : "Email",
+
+    "footer_about" : "About",
+    "footer_careers" : "Careers",
+    "footer_brand_center" : "Brand Center",
+    "footer_blog" : "Blogs",
+
+    "footer_privacy" : "Privacy Policy",
+    "footer_licensing" : "Licensing",
+    "footer_terms" : "Terms & Conditions",
+
+    "footer_company" : "company's products",
+
+    "footer_rights" : " All Rights Reserved. for sharidah company",
+
+    "section_whatsapp" : "Contact Us",
+    "section_whatsapp_hover" : "WhatsApp"
+ 
+  }
+  

@@ -1,0 +1,9 @@
+
+
+export default function NotFound() {
+  return (
+    <>
+      <div>This page is not defined</div>
+    </>
+  );
+}
