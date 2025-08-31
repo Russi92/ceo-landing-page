@@ -111,7 +111,7 @@ export default function Pricing({ dict }: { dict: any }) {
       </div>
 
       {/* Pricing Grid */}
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto p-4 text-center lg:text-start">
         {plans.map((plan, idx) => (
           <div
             key={idx}
