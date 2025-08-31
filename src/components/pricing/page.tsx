@@ -81,8 +81,8 @@ export default function Pricing({ dict }: { dict: any }) {
 
   return (
     
-    <section id="pricing" className="py-16" data-aos="fade-up-right">
-      <div className="text-center mb-12">
+    <section id="pricing" className="py-16">
+      <div className="text-center mb-12" >
         <h2 className="text-3xl font-bold ">{isArabic ? dict.pricing_title_ar : dict.pricing_title}</h2>
         <p className="text-gray-400 mt-2">
       {isArabic ? dict.pricing_subtitle_ar.text : dict.pricing_subtitle.text}{" "}
@@ -94,7 +94,7 @@ export default function Pricing({ dict }: { dict: any }) {
       </div>
 
       {/* Toggle Monthly / Yearly */}
-      <div className="flex justify-center mb-10">
+      <div className="flex justify-center mb-10" >
         <div className="bg-secondary shadow rounded-full p-1 flex gap-2">
           <button
             onClick={() => setYearly(false)}
@@ -121,7 +121,7 @@ export default function Pricing({ dict }: { dict: any }) {
       </div>
 
       {/* Pricing Grid */}
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto p-4 text-center lg:text-start">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto p-4 text-center lg:text-start" data-aos="fade-up-right">
         {plans.map((plan, idx) => (
           <div
             key={idx}
