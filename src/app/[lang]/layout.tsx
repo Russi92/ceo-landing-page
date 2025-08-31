@@ -55,6 +55,8 @@ import WhatsAppButton from "@/components/whatsApp/page";
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
 import React from "react";
+import 'aos/dist/aos.css'
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

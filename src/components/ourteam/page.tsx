@@ -524,8 +524,8 @@ const team = [
   { name: "Mustafa Gameel", title: "BackEnd", img: "/images/team/darsh.jpeg" },
   { name: "Abdelrahman Ahmed", title: "Full Stack", img: "/images/team/abdelrahman.png" },
   { name: "Ahmed Ismael", title: "Full Stack", img: "/images/c.png" },
-  { name: "Ahmed Abdelmoeen ", title: "BackEnd", img: "/images/team/ahmed.jpeg" },
   { name: "Mohamed Ayman", title: "FrondEnd", img: "/images/c.png" },
+  { name: "Ahmed Abdelmoeen ", title: "BackEnd", img: "/images/team/ahmed.jpeg" },
 ];
 
 export default function TeamSection({ dict }: { dict: any }) {

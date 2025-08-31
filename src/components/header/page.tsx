@@ -20,7 +20,7 @@ export default function Header({dict} : {dict: any}) {
   }, []);
 
   return (
-    <div className="w-full h-screen relative" id="home" >
+    <div className="w-full h-screen relative" id="home" data-aos="flip-right">
       <DarkVeil />
       <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center px-4">
         <div

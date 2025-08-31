@@ -1,6 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { useParams } from "next/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const plans = [
   { 
@@ -51,6 +53,13 @@ const plans = [
 ];
 
 export default function Pricing({ dict }: { dict: any }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []);
+
   const [yearly, setYearly] = useState(false);
 
   const formatPrice = (plan: any, dict: any, isArabic: boolean, yearly: boolean) => {
@@ -71,7 +80,8 @@ export default function Pricing({ dict }: { dict: any }) {
   const isArabic = lang === "ar";
 
   return (
-    <section id="pricing" className="py-16">
+    
+    <section id="pricing" className="py-16" data-aos="fade-up-right">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold ">{isArabic ? dict.pricing_title_ar : dict.pricing_title}</h2>
         <p className="text-gray-400 mt-2">
