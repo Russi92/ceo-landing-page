@@ -53,9 +53,9 @@ export default function Partners({ dict }: { dict: any }) {
             <h3 className='text-center text-5xl text-primary mb-10'>{isArabic ? dict.partners_title_ar : dict.partners_title}</h3>
             <div className="relative max-w-full overflow-hidden">
                 {/* Left gradient fade */}
-                <div className="absolute top-0 left-0 h-full w-[20%] bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div className="absolute top-0 left-0 h-full w-[5%] bg-gradient-to-r from-black to-transparent z-10"></div>
                 {/* Right gradient fade */}
-                <div className="absolute top-0 right-0 h-full w-[20%] bg-gradient-to-l from-black to-transparent z-10"></div>
+                <div className="absolute top-0 right-0 h-full w-[5%] bg-gradient-to-l from-black to-transparent z-10"></div>
 
                 {/* Scrolling wrapper */}
                 <div className="flex w-max animate-scroll gap-40 p-6 pause-on-hover">

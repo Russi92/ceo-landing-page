@@ -24,7 +24,7 @@ export default function NavBar({ dict }: { dict: any }) {
 
   const toggleLanguage = () => {
     const newLang = isArabic ? "en" : "ar";
-    // استبدال اول باراميتر في المسار باللغه الجديده
+  
     const segments = pathname.split("/");
     segments[1] = newLang;
     const newPath = segments.join("/");
