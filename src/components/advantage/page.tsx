@@ -62,9 +62,9 @@ export default function Services({ dict }: { dict: any }) {
                   src={service.image}
                   alt="CEO Logo"
                   width={450}
-      height={450}
+                  height={450}
                   
-                  className="object-contain"
+                  className="object-contain absolute top-10"
                 />
                 </div>
 
@@ -72,19 +72,20 @@ export default function Services({ dict }: { dict: any }) {
             </>
           ) : (
             <>
-              <div className="relative h-[500px] md:min-h-[600px]">
+              <div className="relative w-fit h-fit mx-auto">
                 <Image
                   src={'/images/circles.webp'}
                   alt="Circles"
-                  width={400}
-                  height={400}
-                  className="object-fill absolute top-0 left-0 w-full min-h-[600px] animate-pulse"
+                  width={500}
+                  height={500}
+                  className="object-contain animate-pulse"
                 />
                 <Image
                   src={service.image}
                   alt="CEO Logo"
-                  fill
-                  className="object-fill"
+                  width={450}
+                  height={450}
+                  className="object-contain absolute top-10"
                 />
               </div>
               <div className="flex flex-col justify-center gap-5">
@@ -112,20 +113,21 @@ export default function Services({ dict }: { dict: any }) {
               <p className="text-2xl">{isArabic ? dict.advantage_text_ar : dict.advantage_text}</p>
               <PrimaryButton>{isArabic ? dict.advantage_button_more_ar : dict.advantage_button_more}</PrimaryButton>
             </div>
-            <div className="relative h-[500px] md:min-h-[600px]">
+            <div className="relative w-fit h-fit mx-auto">
               <Image
                 src={'/images/circles.webp'}
                 alt="Circles"
-                width={400}
-                height={400}
-                className="object-fill absolute top-0 left-0 w-full min-h-[600px] animate-pulse "
+                width={500}
+                height={500}
+                className="object-contain animate-pulse"
               />
 
               <Image
                 src={service.image}
                 alt="CEO Logo"
-                fill
-                className="object-fill"
+                width={450}
+                  height={450}
+                className="object-contain absolute top-10"
               />
             </div>
           </>
