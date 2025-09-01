@@ -16,6 +16,8 @@ export default async function Home({
     const dir = lang === 'ar' ? 'rtl' : 'ltr'
     const dict = await getDictionary(lang)
 
+    const isArabic = lang === "ar";
+
   return (
     <div>
 
@@ -63,7 +65,9 @@ export default async function Home({
 
       {/* our team section */}
       <div>
-      <OurTeam dict={dict}/>
+      <OurTeam dict={dict} title={isArabic ? dict.team_title_ar : dict.team_title} />
+
+      <OurTeam dict={dict} title="" />
       </div>
       {/* our team section */}
 

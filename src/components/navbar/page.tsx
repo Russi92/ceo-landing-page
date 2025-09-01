@@ -107,7 +107,7 @@ export default function NavBar({ dict }: { dict: any }) {
           <div className="hidden md:flex items-center">
             <Link
               href="#"
-              className="p-2 rounded bg-amber-400 text-black me-4 font-extrabold 
+              className="p-1 rounded bg-amber-400 text-black me-4 font-extrabold 
                transition-all duration-300 ease-in-out 
                hover:bg-amber-300 hover:scale-105 hover:shadow-lg"
             >
@@ -115,7 +115,7 @@ export default function NavBar({ dict }: { dict: any }) {
             </Link>
             <Link
               href="#"
-              className="p-2 rounded bg-transparent border-2 border-[#FFCC00] text-[#FFCC00] hover:bg-[#FFCC00] hover:text-black font-extrabold
+              className="p-1 rounded bg-transparent border-2 border-[#FFCC00] text-[#FFCC00] hover:bg-[#FFCC00] hover:text-black font-extrabold
                transition-all duration-300 ease-in-out 
                 hover:scale-105 hover:shadow-lg"
             >
@@ -125,7 +125,7 @@ export default function NavBar({ dict }: { dict: any }) {
             {/* زر تغيير اللغة */}
             <button
               onClick={toggleLanguage}
-              className="p-2 rounded bg-amber-400 text-black me-4 font-extrabold 
+              className="p-1 rounded bg-amber-400 text-black me-4 font-extrabold 
                transition-all duration-300 ease-in-out 
                hover:bg-amber-300 hover:scale-105 hover:shadow-lg ms-2 cursor-pointer"
             >

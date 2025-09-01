@@ -1,138 +1,206 @@
-
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState, useRef } from "react";
 import PrimaryButton from "../common/PrimaryButton";
 import { useParams } from "next/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
+import "swiper/css";
 
 export default function Services({ dict }: { dict: any }) {
-  const services = [
+  const [showGrid, setShowGrid] = useState(false);
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  const cards = [
     {
       id: 1,
       image: "/images/invoice.webp",
-      title: "Advantage From Our App",
+      title: "Card Title 1",
     },
     {
       id: 2,
       image: "/images/invoice.webp",
-      title: "Advantage From Our App",
+      title: "Card Title 2",
     },
     {
       id: 3,
       image: "/images/invoice.webp",
-      title: "Advantage From Our App",
+      title: "Card Title 3",
     },
     {
       id: 4,
       image: "/images/invoice.webp",
-      title: "Advantage From Our App",
+      title: "Card Title 4",
+    },
+    {
+      id: 5,
+      image: "/images/invoice.webp",
+      title: "Card Title 5",
+    },
+    {
+      id: 6,
+      image: "/images/invoice.webp",
+      title: "Card Title 6",
     },
   ];
 
   const { lang } = useParams() as { lang?: string };
   const isArabic = lang === "ar";
-  
+
   return (
-    <section id="services" className="grid grid-cols-1 gap-40 mt-10">
-      {services.map((service) => (
-        <div
-          key={service.id}
-          className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-20 px-20"
-        >
-          {service.id % 2 !== 0 ? (
-            <>
-              <div className="flex flex-col justify-center gap-5">
-                <h3 className="text-primary text-5xl">
-                {isArabic ? dict.advantage_title_ar : dict.advantage_title}
-                </h3>
-                <p className="text-2xl">{isArabic ? dict.advantage_text_ar : dict.advantage_text}</p>
-                <PrimaryButton>{isArabic ? dict.advantage_button_more_ar : dict.advantage_button_more}</PrimaryButton>
-              </div>
-              <div className="relative w-fit h-fit mx-auto">
-                <Image
-                  src={'/images/circles.webp'}
-                  alt="Circles"
-                  width={500}
-                  height={500}
-                  className="object-contain animate-pulse"
-                />
-             <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src={service.image}
-                  alt="CEO Logo"
-                  width={450}
-                  height={450}
-                  
-                  className="object-contain absolute top-10"
-                />
+    <section id="services" className="grid grid-cols-1 gap-10 mt-10">
+      <h1 className="text-3xl font-bold text-center sm:text-5xl md:text-6xl text-primary">
+        {isArabic ? dict.services_title_ar : dict.services_title}
+      </h1>
+
+      <p className="text-center text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 leading-relaxed">
+        {isArabic ? dict.services_description_ar : dict.services_description}
+      </p>
+
+      {!showGrid && (
+        <div className="relative w-full max-w-6xl mx-auto px-10">
+          <Swiper
+            modules={[Autoplay]}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
+            loop={true}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="w-full"
+          >
+            {cards.map((card) => (
+              <SwiperSlide key={card.id}>
+                <div className="shadow-md rounded-lg overflow-hidden p-4 flex flex-col items-center text-center bg-secondary/50 h-[480px]">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-48 object-cover rounded-md"
+                  />
+
+                  <h3 className="text-lg font-bold mt-4 text-primary">
+                    {isArabic
+                      ? dict.services_cards_title_ar[card.id - 1]
+                      : dict.services_cards_title[card.id - 1]}
+                  </h3>
+
+                  <ul
+                    className={`list-disc list-inside text-white mt-3 space-y-1 text-sm sm:text-base w-full
+              overflow-y-auto max-h-[20rem] pr-2 custom-scrollbar ${
+                isArabic ? "text-right" : "text-left"
+              }`}
+                  >
+                    {isArabic
+                      ? dict.services_dot_ar.map(
+                          (desc: string, index: number) => (
+                            <li key={index}>{desc}</li>
+                          )
+                        )
+                      : dict.services_dots.map(
+                          (desc: string, index: number) => (
+                            <li key={index}>{desc}</li>
+                          )
+                        )}
+                  </ul>
+
+                  <PrimaryButton className="text-black px-4 py-2 rounded-lg mt-auto">
+                    {isArabic ? dict.services_button_ar : dict.services_button}
+                  </PrimaryButton>
                 </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="relative w-fit h-fit mx-auto">
-                <Image
-                  src={'/images/circles.webp'}
-                  alt="Circles"
-                  width={500}
-                  height={500}
-                  className="object-contain animate-pulse"
-                />
-                <Image
-                  src={service.image}
-                  alt="CEO Logo"
-                  width={450}
-                  height={450}
-                  className="object-contain absolute top-10"
-                />
-              </div>
-              <div className="flex flex-col justify-center gap-5">
-                <h3 className="text-primary text-5xl">
-                {isArabic ? dict.advantage_title_ar : dict.advantage_title}
-                </h3>
-                <p className="text-2xl">{isArabic ? dict.advantage_text_ar : dict.advantage_text}</p>
-                <PrimaryButton>{isArabic ? dict.advantage_button_more_ar : dict.advantage_button_more}</PrimaryButton>
-              </div>
-            </>
-          )}
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary/80 transition cursor-pointer font-bold ${
+              isArabic
+                ? "right-2 sm:right-4 md:-right-12"
+                : "left-2 sm:left-4 md:-left-12"
+            }`}
+          >
+            {"<"}
+          </button>
+
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary/80 transition cursor-pointer font-bold ${
+              isArabic
+                ? "left-2 sm:left-4 md:-left-12"
+                : "right-2 sm:right-4 md:-right-12"
+            }`}
+          >
+            {">"}
+          </button>
         </div>
-      ))}
+      )}
 
-      {services.map((service) => (
-        <div
-          key={service.id}
-          className="grid md:hidden grid-cols-1 md:grid-cols-2 gap-20 px-20"
-        >
-          <>
-            <div className="flex flex-col justify-center gap-5">
-              <h3 className="text-primary text-5xl">
-              {isArabic ? dict.advantage_title_ar : dict.advantage_title}
+      {showGrid && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              className="shadow-md rounded-lg overflow-hidden p-4 flex flex-col items-center text-center bg-gray-900 h-[480px]"
+            >
+              <img
+                src={card.image}
+                alt={card.title}
+                className="w-full h-48 object-cover rounded-md"
+              />
+
+              <h3 className="text-lg font-bold mt-4 text-primary">
+                {isArabic
+                  ? dict.services_cards_title_ar[card.id - 1]
+                  : dict.services_cards_title[card.id - 1]}
               </h3>
-              <p className="text-2xl">{isArabic ? dict.advantage_text_ar : dict.advantage_text}</p>
-              <PrimaryButton>{isArabic ? dict.advantage_button_more_ar : dict.advantage_button_more}</PrimaryButton>
-            </div>
-            <div className="relative w-fit h-fit mx-auto">
-              <Image
-                src={'/images/circles.webp'}
-                alt="Circles"
-                width={500}
-                height={500}
-                className="object-contain animate-pulse"
-              />
 
-              <Image
-                src={service.image}
-                alt="CEO Logo"
-                width={450}
-                  height={450}
-                className="object-contain absolute top-10"
-              />
+              <ul
+                className={`list-disc list-inside text-white mt-3 space-y-1 text-sm sm:text-base w-full
+              overflow-y-auto max-h-[20rem] pr-2 custom-scrollbar ${
+                isArabic ? "text-right" : "text-left"
+              }`}
+              >
+                {isArabic
+                  ? dict.services_dot_ar.map((desc: string, index: number) => (
+                      <li key={index}>{desc}</li>
+                    ))
+                  : dict.services_dots.map((desc: string, index: number) => (
+                      <li key={index}>{desc}</li>
+                    ))}
+              </ul>
+
+              <PrimaryButton className="text-black px-4 py-2 rounded-lg mt-auto">
+                {isArabic ? dict.services_button_ar : dict.services_button}
+              </PrimaryButton>
             </div>
-          </>
+          ))}
         </div>
-      ))}
+      )}
+
+      <div className="text-center">
+        <button
+          onClick={() => setShowGrid((prev) => !prev)}
+          className="text-primary font-bold underline text-lg"
+        >
+          {showGrid
+            ? isArabic
+              ? dict.services_show_slider_button_ar
+              : dict.services_show_slider_button
+            : isArabic
+            ? dict.services_more_button_ar
+            : dict.services_more_button}
+        </button>
+      </div>
     </section>
   );
 }

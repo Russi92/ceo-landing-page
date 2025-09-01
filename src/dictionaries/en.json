@@ -17,14 +17,38 @@
     "who_description": "Khalids offers a unique experience for businesses through a modern application to streamline control, business solutions, and highly dynamic business management — enabling faster task completion and hassle-free navigation.",
     "who_button_more": "More",
     "who_button_less": "Less",
+    "who_button_download": "Download File",
   
     "for_ceo_title": "FOR CEO",
     "for_ceo_subtitle": "Enjoy managing your work",
+    "for_more_button": "More",
+    "for_less_button": "Less",
   
     "advantage_title": "ADVANTAGE FROM OUR APP",
     "advantage_text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Maecenas vitae tempor odio. Etiam a facilisis ex. Donec et sapien eget lorem viverra aliquam ac eu metus. Phasellus consequat nisi in est aliquam accumsan.",
     "advantage_button_more": "More",
     "advantage_button_less": "Less",
+
+    "services_title" : "Services",
+    "services_description" : "Khallaba Information Technology delivers innovative solutions to empower your business success, offering comprehensive services in software development and digital transformation.",
+    "services_button": "Buy",
+    "services_more_button": "More",
+    "services_show_slider_button": "Show Slider",
+    "services_cards_title": [
+      "Card 1",
+      "Card 2",
+      "Card 3",
+      "Card 4",
+      "Card 5",
+      "Card 6"
+    ],
+    "services_dots": [
+      "This is the first definition for card 1.",
+      "This is the second definition for card 1.",
+      "This is the third definition for card 1.",
+      "This is the third definition for card 1.",
+      "This is the third definition for card 1."
+    ],
   
     "pricing_title": "Pricing Plans",
     "pricing_subtitle": {

@@ -84,9 +84,11 @@ import PrimaryButton from "../common/PrimaryButton";
 import ceo from "../../../public/images/ceo_circles.svg";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { FaFilePdf } from "react-icons/fa";
 
 export default function WhoAreWe({ dict }: { dict: any }) {
   const [showMore, setShowMore] = useState(false);
+
 
  
   const { lang } = useParams() as { lang?: string };
@@ -113,15 +115,37 @@ export default function WhoAreWe({ dict }: { dict: any }) {
           </p>
         )}
 
-        <PrimaryButton onClick={() => setShowMore(!showMore)}>
-          {showMore
-            ? isArabic
-              ? dict.who_button_less_ar
-              : dict.who_button_less
-            : isArabic
-              ? dict.who_button_more_ar
-              : dict.who_button_more}
+      <div className="flex flex-col sm:flex-row  gap-4">
+        <div>
+          <PrimaryButton onClick={() => setShowMore(!showMore)}>
+            {showMore
+              ? isArabic
+                ? dict.who_button_less_ar
+                : dict.who_button_less
+              : isArabic
+                ? dict.who_button_more_ar
+                : dict.who_button_more}
+          </PrimaryButton>
+        </div>
+
+        <div>
+        <PrimaryButton className="flex items-center gap-2">
+          <FaFilePdf className="text-sm" />
+          <span>
+            {isArabic ? dict.who_button_download_ar : dict.who_button_download}
+          </span>
         </PrimaryButton>
+        </div>
+
+        <div>
+        <PrimaryButton className="flex items-center gap-2">
+          <FaFilePdf className="text-sm" />
+          <span>
+            {isArabic ? dict.who_button_download_ar : dict.who_button_download}
+          </span>
+        </PrimaryButton>
+        </div>
+      </div>
       </div>
     </section>
   );
