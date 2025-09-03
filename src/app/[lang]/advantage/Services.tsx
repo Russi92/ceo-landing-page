@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useRef } from "react";
-import PrimaryButton from "../common/PrimaryButton";
+import PrimaryButton from "../../components/common/PrimaryButton";
 import { useParams } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";

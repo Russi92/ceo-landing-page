@@ -49,9 +49,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import NavBar from "@/app/components/navbar/page";
-import Footer from "@/app/components/footer/page";
-import WhatsAppButton from "@/app/components/whatsApp/page";
+import NavBar from "@/app/[lang]/navbar/page";
+import Footer from "@/app/[lang]/footer/page";
+import WhatsAppButton from "@/app/[lang]/whatsApp/page";
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
 import React from "react";

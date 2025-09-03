@@ -80,7 +80,7 @@
 "use client";
 
 import { useState } from "react";
-import PrimaryButton from "../common/PrimaryButton";
+import PrimaryButton from "../../components/common/PrimaryButton";
 // import ceo from "../../../../public/images/ceo_circles.svg";
 import Image from "next/image";
 import { useParams } from "next/navigation";

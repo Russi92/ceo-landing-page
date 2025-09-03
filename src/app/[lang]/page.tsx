@@ -1,13 +1,13 @@
-import Header from "@/app/components/header/page";
-import WhoAreWe from "@/app/components/WhoAreWe/page"
-import Features from "@/app/components/features/page";
-import Services from "@/app/components/advantage/Services";
-import Pricing from "@/app/components/pricing/page";
-import Partners from "@/app/components/partners/page";
-import PartnersTools from "@/app/components/partners2/page";
-import OurTeam from "@/app/components/ourTeam/page";
-import OurTeamCompany from "@/app/components/ourTeamCompany/page"
-import ServiceDetails from "../components/advantage/service-details/page";
+import Header from "@/app/[lang]/header/page";
+import WhoAreWe from "@/app/[lang]/WhoAreWe/page"
+import Features from "@/app/[lang]/features/page";
+import Services from "@/app/[lang]/advantage/Services";
+import Pricing from "@/app/[lang]/pricing/page";
+import Partners from "@/app/[lang]/partners/page";
+import PartnersTools from "@/app/[lang]/partners2/page";
+import OurTeam from "@/app/[lang]/ourTeam/page";
+import OurTeamCompany from "@/app/[lang]/ourTeamCompany/page"
+import ServiceDetails from "./advantage/service-details/page";
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
 

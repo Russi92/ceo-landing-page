@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
 // import ceo from "../../../../public/navbar/ceo.webp"
-import ContactModal from "../../[lang]/contactUs/page";
+import ContactModal from "../contactUs/page";
 import { useParams, usePathname, useRouter } from "next/navigation";
 
 export default function NavBar({ dict }: { dict: any }) {
