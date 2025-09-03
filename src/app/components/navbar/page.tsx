@@ -95,7 +95,6 @@ export default function NavBar({ dict }: { dict: any }) {
             >
               {dict.navbar_team}
             </ScrollLink>
-
             <span
               onClick={() => setIsOpen(true)}
               className="me-4 font-extrabold transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"
