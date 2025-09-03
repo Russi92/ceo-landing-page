@@ -103,7 +103,6 @@ interface FormData {
   phone: string;
   message: string;
 }
-
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
