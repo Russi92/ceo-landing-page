@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
-import ceo from "../../../public/navbar/ceo.webp";
+// import ceo from "../../../../public/navbar/ceo.webp"
 import ContactModal from "../contactUs/page";
 import { useParams, usePathname, useRouter } from "next/navigation";
 
@@ -33,17 +33,19 @@ export default function NavBar({ dict }: { dict: any }) {
 
   return (
     <>
-      <div className="w-full bg-secondary fixed top-0 z-20">
+      <div className="w-full bg-gradient-to-l from-[#f8f4f0] to-[#f8e6bc]
+                      fixed top-0 z-20 shadow-md">
         <div className="flex items-center h-18 justify-between px-4 md:px-8">
           {/* Logo */}
           <div>
             <Link href="/">
-              <Image src={ceo} alt="Logo" width={40} height={40} />
+              {/* <Image src="/images/navbar/ceo.webp" alt="Logo" width={40} height={40} /> */}
+              <Image src="/images/navbar/ceo.webp" alt="Logo" width={40} height={40} />
             </Link>
           </div>
 
           {/* Links - Desktop */}
-          <div className="hidden md:flex text-white">
+          <div className="hidden md:flex text-gray-500">
             <ScrollLink
               to="home"
               smooth
@@ -107,7 +109,7 @@ export default function NavBar({ dict }: { dict: any }) {
           <div className="hidden md:flex items-center">
             <Link
               href="#"
-              className="p-1 rounded bg-amber-400 text-black me-4 font-extrabold 
+              className="py-2 px-5 rounded bg-amber-400 text-black me-4 font-extrabold 
                transition-all duration-300 ease-in-out 
                hover:bg-amber-300 hover:scale-105 hover:shadow-lg"
             >
@@ -115,7 +117,7 @@ export default function NavBar({ dict }: { dict: any }) {
             </Link>
             <Link
               href="#"
-              className="p-1 rounded bg-transparent border-2 border-[#FFCC00] text-[#FFCC00] hover:bg-[#FFCC00] hover:text-black font-extrabold
+              className="py-2 px-5 rounded bg-transparent border-2 border-[#FFCC00] text-black hover:bg-[#FFCC00] hover:text-black font-extrabold
                transition-all duration-300 ease-in-out 
                 hover:scale-105 hover:shadow-lg"
             >
@@ -125,7 +127,7 @@ export default function NavBar({ dict }: { dict: any }) {
             {/* زر تغيير اللغة */}
             <button
               onClick={toggleLanguage}
-              className="p-1 rounded bg-amber-400 text-black me-4 font-extrabold 
+              className="py-2 px-4 rounded bg-transparent ring-2 ring-gray-300 text-black me-4 font-extrabold 
                transition-all duration-300 ease-in-out 
                hover:bg-amber-300 hover:scale-105 hover:shadow-lg ms-2 cursor-pointer"
             >

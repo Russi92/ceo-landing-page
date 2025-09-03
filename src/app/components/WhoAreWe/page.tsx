@@ -81,7 +81,7 @@
 
 import { useState } from "react";
 import PrimaryButton from "../common/PrimaryButton";
-import ceo from "../../../public/images/ceo_circles.svg";
+// import ceo from "../../../../public/images/ceo_circles.svg";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { FaFilePdf } from "react-icons/fa";
@@ -97,7 +97,7 @@ export default function WhoAreWe({ dict }: { dict: any }) {
   return (
     <section id="about" className="grid grid-cols-1 md:grid-cols-2 gap-10 p-20">
       <div className="relative min-h-[600px]">
-        <Image src={ceo} className="animate-pulse" alt="circle logo" />
+        <Image fill src="/images/ceo_circles.svg"  className="animate-pulse" alt="circle logo" />
       </div>
 
       <div className="flex flex-col justify-center gap-5">

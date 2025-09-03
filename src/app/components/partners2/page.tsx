@@ -97,13 +97,13 @@ export default function PartnersTools() {
     ]
 
     return (
-        <section className='mb-10'>
+        <section className='mb-10' dir='ltr'>
            
             <div className="relative max-w-full overflow-hidden">
                 {/* Left gradient fade */}
-                <div className="absolute top-0 left-0 h-full w-[5%] bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div className="absolute top-0 left-0 h-full w-[5%] z-10"></div>
                 {/* Right gradient fade */}
-                <div className="absolute top-0 right-0 h-full w-[5%] bg-gradient-to-l from-black to-transparent z-10"></div>
+                <div className="absolute top-0 right-0 h-full w-[5%] z-10"></div>
 
                 {/* Scrolling wrapper */}
                 <div className="flex w-max animate-scroll-tools gap-40 p-6 pause-on-hover">
@@ -113,6 +113,8 @@ export default function PartnersTools() {
                     href={p.url} 
                     target="_blank" 
                     rel="noopener noreferrer">
+                       
+                            
                         <Image
                             key={index}
                             src={`/images/tools-partners/${p.name}.svg`}
@@ -120,9 +122,10 @@ export default function PartnersTools() {
                             width={50}
                             height={50}
                             className="object-contain"
-                        />
+                            />
+                      
                     </a>
-                    ))}
+                            ))}
                 </div>
             </div>
 

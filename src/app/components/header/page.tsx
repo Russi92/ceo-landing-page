@@ -5,10 +5,10 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import DarkVeil from "../../../back/DarkVeil/DarkVeil";
+// import DarkVeil from "../../../../back/DarkVeil/DarkVeil";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import PrimaryButton from "@/components/common/PrimaryButton"
+import PrimaryButton from "@/app/components/common/PrimaryButton"
 
 
 export default function Header({dict} : {dict: any}) {
@@ -21,14 +21,14 @@ export default function Header({dict} : {dict: any}) {
 
   return (
     <div className="w-full h-screen relative" id="home" data-aos="flip-right">
-      <DarkVeil />
+      {/* <DarkVeil /> */}
       <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center px-4">
         <div
-          className="text-white text-center flex flex-col justify-center items-center gap-6 sm:gap-7"
+          className="text-secondary text-center flex flex-col justify-center items-center gap-6 sm:gap-7"
           data-aos="zoom-in"
         >
           <Image
-            src="/images/logo_white.webp"
+            src="/images/c.png"
             alt="logo"
             width={100}
             height={100}

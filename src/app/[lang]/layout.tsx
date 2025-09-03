@@ -49,9 +49,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import NavBar from "@/components/navbar/page";
-import Footer from "@/components/footer/page";
-import WhatsAppButton from "@/components/whatsApp/page";
+import NavBar from "@/app/components/navbar/page";
+import Footer from "@/app/components/footer/page";
+import WhatsAppButton from "@/app/components/whatsApp/page";
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
 import React from "react";
@@ -86,7 +86,8 @@ export default async function RootLayout({
   return (
     <html lang={lang} dir={dir}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NavBar dict={dict}/>
+        <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-tr from-[#f8e6bc] from-45% to-[#f8f4f0]   to-100% -z-10"></div>
+         <NavBar dict={dict}/>
         {children}
         <WhatsAppButton dict={dict}/>
         <Footer dict={dict}/>

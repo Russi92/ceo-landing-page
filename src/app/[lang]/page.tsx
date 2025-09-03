@@ -1,11 +1,13 @@
-import Header from "@/components/header/page";
-import WhoAreWe from "@/components/WhoAreWe/page"
-import Features from "@/components/features/page";
-import Services from "@/components/advantage/page";
-import Pricing from "@/components/pricing/page";
-import Partners from "@/components/partners/page";
-import PartnersTools from "@/components/partners2/page";
-import OurTeam from "@/components/ourteam/page";
+import Header from "@/app/components/header/page";
+import WhoAreWe from "@/app/components/WhoAreWe/page"
+import Features from "@/app/components/features/page";
+import Services from "@/app/components/advantage/Services";
+import Pricing from "@/app/components/pricing/page";
+import Partners from "@/app/components/partners/page";
+import PartnersTools from "@/app/components/partners2/page";
+import OurTeam from "@/app/components/ourTeam/page";
+import OurTeamCompany from "@/app/components/ourTeamCompany/page"
+import ServiceDetails from "../components/advantage/service-details/page";
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
 
@@ -67,9 +69,15 @@ export default async function Home({
       <div>
       <OurTeam dict={dict} title={isArabic ? dict.team_title_ar : dict.team_title} />
 
-      <OurTeam dict={dict} title="" />
+      <OurTeamCompany dict={dict} title="" />
       </div>
       {/* our team section */}
+
+      {/* service details */}
+      <div>
+        <ServiceDetails />
+      </div>
+      {/* service details */}
 
     </div>
 

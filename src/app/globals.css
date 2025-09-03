@@ -3,13 +3,24 @@
 @theme {
     --color-primary: #ffcc00;
     --color-secondary: #19191c;
+    --color-tertiary: #f8e6bc;
+
   }
 
   body{
-    background-color: black;
-    color: white;
+    background: #F8F4F0;
+    /* background-color: black; */
+    background: linear-gradient(135deg, #f8f4f0 45%, #f8e6bc 100%);
+    /* color: rgb(0, 0, 0); */
+    color: #6b7280;
     scroll-behavior: smooth;
   }
+
+
+
+
+
+  /* Government agencies animation*/
 
   @keyframes scroll {
     0% {
@@ -25,7 +36,13 @@
     animation: scroll 40s linear infinite;
   }
 
+   /* Government agencies animation*/
 
+
+
+
+
+  /* programming tools animation */
 
   @keyframes scroll-tools {
     0% {
@@ -44,44 +61,15 @@
     animation-play-state: paused !important;
   }
 
+  /* programming tools animation */
 
-  @keyframes rtl-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  .animate-rtl-scroll {
-    animation: rtl-scroll 90s linear infinite;
-  }
-  
-  @keyframes ltr-scroll {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  .animate-ltr-scroll {
-    animation: ltr-scroll 90s linear infinite;
-  }
-  
-  .pause-on-hover:hover {
-    animation-play-state: paused !important;
-  }
-  
 
-  
+
 
 
 
 .pause-on-hover:hover img {
-  filter: brightness(0) invert(1);
+  filter: brightness(1) invert(1);
   transition: all 0.3s ease ,filter 0.3s ease, border 0.3s ease;
 }
 
@@ -93,32 +81,25 @@
   z-index: 10; 
 }
 
-.team-orbit {
-  animation: orbit 60s linear infinite; 
+.border-card{
+  transition: all 0.3s ease ,filter 0.3s ease, border 0.3s ease;
 }
 
-@keyframes orbit {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.border-card:hover{
+  border: 2px solid #FFCC00;
+  border-radius: 8px;
+  transform: scale(1.2); 
+}
+
+.pause-on-hover-ceo-team:hover {
+  animation-play-state: paused !important;
 }
 
 
-.team-member-content {
-  animation: counter-orbit 60s linear infinite;
-}
 
-@keyframes counter-orbit {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
+
+
+
 
 
 
@@ -140,14 +121,6 @@
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.8);
 }
-
-
-
-
-
-
-
-
 
 
 .custom-swiper-buttons {

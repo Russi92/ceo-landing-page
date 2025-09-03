@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import ceo from "../../../public/images/c.png";
+// import ceo from "../../../public/images/c.png";
 import { useParams } from "next/navigation";
 
 
@@ -48,14 +48,14 @@ export default function Partners({ dict }: { dict: any }) {
 
 
     return (
-        <section className='mb-10'>
-            <Image src={ceo} alt='logo' className='m-auto mb-5' width={85}/>
-            <h3 className='text-center text-5xl text-primary mb-10'>{isArabic ? dict.partners_title_ar : dict.partners_title}</h3>
+        <section className='mb-10' dir='ltr'>
+            {/* <Image src={ceo} alt='logo' className='m-auto mb-5' width={85}/> */}
+            <h3 className='text-center text-5xl text-gray-500 font-bold mb-10'>{isArabic ? dict.partners_title_ar : dict.partners_title}</h3>
             <div className="relative max-w-full overflow-hidden">
                 {/* Left gradient fade */}
-                <div className="absolute top-0 left-0 h-full w-[5%] bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div className="absolute top-0 left-0 h-full w-[5%] z-10"></div>
                 {/* Right gradient fade */}
-                <div className="absolute top-0 right-0 h-full w-[5%] bg-gradient-to-l from-black to-transparent z-10"></div>
+                <div className="absolute top-0 right-0 h-full w-[5%] z-10"></div>
 
                 {/* Scrolling wrapper */}
                 <div className="flex w-max animate-scroll gap-40 p-6 pause-on-hover">

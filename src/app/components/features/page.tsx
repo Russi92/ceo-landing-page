@@ -317,7 +317,7 @@ export default function Features({ dict }: FeaturesProps) {
 
   return (
     <section className="px-5 md:px-20 lg:px-40" data-aos="fade-up">
-      <div className="mb-10 text-center md:text-left">
+      <div className="mb-10">
         <h2 className="text-3xl sm:text-5xl md:text-6xl text-primary font-bold mb-4">
           {dict?.for_ceo_title ||
             (isArabic ? "ميزات للمدراء التنفيذيين" : "Features for CEOs")}
@@ -330,17 +330,17 @@ export default function Features({ dict }: FeaturesProps) {
         </h4>
       </div>
 
-      <div className="bg-[#ae9c56] p-5 sm:p-10 rounded-3xl relative text-black">
+      <div className="bg-[#f1daa5] p-5 sm:p-10 rounded-3xl relative text-black">
         <div
-          className="bg-[#d2be6f] -rotate-90 absolute top-20 p-2 hidden lg:block"
-          style={{ left: "-68px" }}
+          className="bg-[#f1daa5] -rotate-90 absolute top-20 p-2 hidden lg:block"
+          style={{ left: "-66px" }}
         >
           {dict?.for_ceo_features || (isArabic ? "الميزات" : "Features")}
         </div>
 
         <div className="mb-10">
           <h3 className="text-lg sm:text-2xl md:text-3xl">
-            {dict?.for_ceo_subtitle2 ||
+            {dict?.for_ceo_subtitle ||
               (isArabic
                 ? "كل ما تحتاجه لإدارة أعمالك"
                 : "Everything you need to manage your business")}
@@ -351,7 +351,7 @@ export default function Features({ dict }: FeaturesProps) {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="w-full ring-2 ring-white bg-gradient-to-br from-[#c0af6c] to-[#cebe7d] text-secondary rounded-3xl p-5 sm:p-10 flex flex-col gap-5 hover:scale-105 transition-all duration-700"
+              className="w-full ring-2 ring-white bg-[#f8e3b2] shadow-md text-secondary rounded-3xl p-5 sm:p-10 flex flex-col gap-5 hover:scale-105 transition-all duration-700"
             >
               <div className="flex gap-5">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 text-slate-900">

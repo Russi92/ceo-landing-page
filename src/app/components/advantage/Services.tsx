@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
+import { Link } from "react-scroll";
 
 export default function Services({ dict }: { dict: any }) {
   const [showGrid, setShowGrid] = useState(false);
@@ -55,7 +56,7 @@ export default function Services({ dict }: { dict: any }) {
         {isArabic ? dict.services_title_ar : dict.services_title}
       </h1>
 
-      <p className="text-center text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 leading-relaxed">
+      <p className="text-center font-bold text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 leading-relaxed">
         {isArabic ? dict.services_description_ar : dict.services_description}
       </p>
 
@@ -81,21 +82,21 @@ export default function Services({ dict }: { dict: any }) {
           >
             {cards.map((card) => (
               <SwiperSlide key={card.id}>
-                <div className="shadow-md rounded-lg overflow-hidden p-4 flex flex-col items-center text-center bg-secondary/50 h-[480px]">
+                <div className="shadow-md rounded-lg overflow-hidden p-4 flex flex-col items-center text-center bg-[#f1daa5] h-[480px]">
                   <img
                     src={card.image}
                     alt={card.title}
                     className="w-full h-48 object-cover rounded-md"
                   />
 
-                  <h3 className="text-lg font-bold mt-4 text-primary">
+                  <h3 className="text-lg font-bold mt-4 text-gray-500">
                     {isArabic
                       ? dict.services_cards_title_ar[card.id - 1]
                       : dict.services_cards_title[card.id - 1]}
                   </h3>
 
                   <ul
-                    className={`list-disc list-inside text-white mt-3 space-y-1 text-sm sm:text-base w-full
+                    className={`list-disc list-inside text-gray-500 mt-3 space-y-1 text-sm sm:text-base w-full
               overflow-y-auto max-h-[20rem] pr-2 custom-scrollbar ${
                 isArabic ? "text-right" : "text-left"
               }`}
@@ -113,9 +114,10 @@ export default function Services({ dict }: { dict: any }) {
                         )}
                   </ul>
 
-                  <PrimaryButton className="text-black px-4 py-2 rounded-lg mt-auto">
+                  <a href="#" className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-auto 
+                        hover:bg-primary hover:text-black transition duration-300">
                     {isArabic ? dict.services_button_ar : dict.services_button}
-                  </PrimaryButton>
+                  </a>
                 </div>
               </SwiperSlide>
             ))}
@@ -123,7 +125,7 @@ export default function Services({ dict }: { dict: any }) {
 
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary/80 transition cursor-pointer font-bold ${
+            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
               isArabic
                 ? "right-2 sm:right-4 md:-right-12"
                 : "left-2 sm:left-4 md:-left-12"
@@ -134,7 +136,7 @@ export default function Services({ dict }: { dict: any }) {
 
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary/80 transition cursor-pointer font-bold ${
+            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
               isArabic
                 ? "left-2 sm:left-4 md:-left-12"
                 : "right-2 sm:right-4 md:-right-12"
@@ -150,7 +152,7 @@ export default function Services({ dict }: { dict: any }) {
           {cards.map((card) => (
             <div
               key={card.id}
-              className="shadow-md rounded-lg overflow-hidden p-4 flex flex-col items-center text-center bg-gray-900 h-[480px]"
+              className="shadow-md rounded-lg overflow-hidden p-4 flex flex-col items-center text-center bg-[#f1daa5] h-[480px]"
             >
               <img
                 src={card.image}
@@ -158,14 +160,14 @@ export default function Services({ dict }: { dict: any }) {
                 className="w-full h-48 object-cover rounded-md"
               />
 
-              <h3 className="text-lg font-bold mt-4 text-primary">
+              <h3 className="text-lg font-bold mt-4 text-gray-500">
                 {isArabic
                   ? dict.services_cards_title_ar[card.id - 1]
                   : dict.services_cards_title[card.id - 1]}
               </h3>
 
               <ul
-                className={`list-disc list-inside text-white mt-3 space-y-1 text-sm sm:text-base w-full
+                className={`list-disc list-inside text-gray-500 mt-3 space-y-1 text-sm sm:text-base w-full
               overflow-y-auto max-h-[20rem] pr-2 custom-scrollbar ${
                 isArabic ? "text-right" : "text-left"
               }`}
@@ -179,9 +181,10 @@ export default function Services({ dict }: { dict: any }) {
                     ))}
               </ul>
 
-              <PrimaryButton className="text-black px-4 py-2 rounded-lg mt-auto">
+              <a href="/advantage/service-details" className="text-black border
+              hover:bg-primary hover:text-black border-gray-400 px-4 py-2 rounded-lg mt-auto">
                 {isArabic ? dict.services_button_ar : dict.services_button}
-              </PrimaryButton>
+              </a>
             </div>
           ))}
         </div>
@@ -190,7 +193,7 @@ export default function Services({ dict }: { dict: any }) {
       <div className="text-center">
         <button
           onClick={() => setShowGrid((prev) => !prev)}
-          className="text-primary font-bold underline text-lg"
+          className="text-gray-500 font-bold underline text-lg"
         >
           {showGrid
             ? isArabic

@@ -248,7 +248,7 @@ export default function Pricing({ dict }: { dict: any }) {
     <section id="pricing" className="py-16">
       <div className="text-center mb-12" >
         <h2 className="text-3xl font-bold ">{isArabic ? dict.pricing_title_ar : dict.pricing_title}</h2>
-        <p className="text-gray-400 mt-2">
+        <p className="text-gray-500 mt-2">
       {isArabic ? dict.pricing_subtitle_ar.text : dict.pricing_subtitle.text}{" "}
       <span className="font-semibold text-primary">
         {isArabic ? dict.pricing_subtitle_ar.highlight : dict.pricing_subtitle.highlight}
@@ -265,7 +265,7 @@ export default function Pricing({ dict }: { dict: any }) {
             className={`px-6 py-2 rounded-full cursor-pointer transition ${
               !yearly
                 ? "bg-gradient-to-r from-[#997A00] to-[#FFCC00] text-secondary"
-                : "text-gray-400"
+                : "text-gray-500"
             }`}
           >
             
@@ -285,11 +285,11 @@ export default function Pricing({ dict }: { dict: any }) {
       </div>
 
       {/* Pricing Grid */}
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto p-4 text-center lg:text-start" data-aos="fade-up-right">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto p-4 text-center lg:text-start">
         {plans.map((plan, idx) => (
           <div
             key={idx}
-            className="bg-secondary/50 shadow rounded-2xl p-6 flex flex-col hover:shadow-lg transition"
+            className="bg-[#f1daa5] shadow rounded-2xl p-6 flex flex-col hover:shadow-lg transition"
           >
             {/* الصورة هنا */}
             <Image
@@ -300,7 +300,7 @@ export default function Pricing({ dict }: { dict: any }) {
               className="mx-auto mb-4" // توسيط الصورة وإضافة هامش سفلي
             />
 
-            <h3 className="text-xl font-semibold mb-2 text-white">
+            <h3 className="text-xl font-semibold mb-2 text-black">
             {isArabic ? dict.pricing_emp_ar : dict.pricing_emp} {" "}
               {plan.range}
             </h3>
@@ -308,12 +308,12 @@ export default function Pricing({ dict }: { dict: any }) {
               {formatPrice(plan, dict, isArabic, yearly)}
             </p>
 
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-black text-sm mb-6">
               {plan.price}{isArabic ? dict.pricing_dollar_icon_ar : dict.pricing_dollar_icon}{" "}
               {isArabic ? dict.pricing_per_employee_ar : dict.pricing_per_employee}
             </p>
 
-            <button className="mt-auto bg-gradient-to-r from-[#997A00] to-[#FFCC00] text-secondary py-2 rounded-xl 
+            <button className="mt-auto bg-primary text-black py-2 rounded-xl 
             hover:opacity-90 hover:font-extrabold transition-all duration-300 ease-in-out cursor-pointer ">
               {isArabic ? dict.pricing_subscribe_ar : dict.pricing_subscribe}
             </button>
