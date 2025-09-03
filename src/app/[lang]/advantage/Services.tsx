@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import React, { useState, useRef } from "react";
-import PrimaryButton from "../../components/common/PrimaryButton";
+// import PrimaryButton from "../../components/common/PrimaryButton";
 import { useParams } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 export default function Services({ dict }: { dict: any }) {
   const [showGrid, setShowGrid] = useState(false);
@@ -114,10 +114,10 @@ export default function Services({ dict }: { dict: any }) {
                         )}
                   </ul>
 
-                  <a href="#" className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-auto 
+                  <Link href="#" className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-auto 
                         hover:bg-primary hover:text-black transition duration-300">
                     {isArabic ? dict.services_button_ar : dict.services_button}
-                  </a>
+                  </Link>
                 </div>
               </SwiperSlide>
             ))}
