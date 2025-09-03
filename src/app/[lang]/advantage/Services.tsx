@@ -114,7 +114,7 @@ export default function Services({ dict }: { dict: any }) {
                         )}
                   </ul>
 
-                  <Link href="#" className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-auto 
+                  <Link href="/" className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-auto 
                         hover:bg-primary hover:text-black transition duration-300">
                     {isArabic ? dict.services_button_ar : dict.services_button}
                   </Link>
@@ -181,7 +181,7 @@ export default function Services({ dict }: { dict: any }) {
                     ))}
               </ul>
 
-              <Link href="/advantage/service-details" className="text-black border
+              <Link href="/" className="text-black border
               hover:bg-primary hover:text-black border-gray-400 px-4 py-2 rounded-lg mt-auto">
                 {isArabic ? dict.services_button_ar : dict.services_button}
               </Link>

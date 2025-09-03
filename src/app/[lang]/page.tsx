@@ -1,13 +1,13 @@
-import Header from "@/app/[lang]/header/page";
-import WhoAreWe from "@/app/[lang]/WhoAreWe/page"
-import Features from "@/app/[lang]/features/page";
+import Header from "@/app/[lang]/header/Header";
+import WhoAreWe from "@/app/[lang]/WhoAreWe/WhoAreWe"
+import Features from "@/app/[lang]/features/Features";
 import Services from "@/app/[lang]/advantage/Services";
-import Pricing from "@/app/[lang]/pricing/page";
-import Partners from "@/app/[lang]/partners/page";
-import PartnersTools from "@/app/[lang]/partners2/page";
-import OurTeam from "@/app/[lang]/ourTeam/page";
-import OurTeamCompany from "@/app/[lang]/ourTeamCompany/page"
-import ServiceDetails from "./advantage/service-details/page";
+import Pricing from "@/app/[lang]/pricing/Pricing";
+import Partners from "@/app/[lang]/partners/Partners";
+import PartnersTools from "@/app/[lang]/partners2/PartnersTools";
+import OurTeam from "@/app/[lang]/ourTeam/Partners";
+import OurTeamCompany from "@/app/[lang]/ourTeamCompany/Partners"
+
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
 
@@ -73,11 +73,7 @@ export default async function Home({
       </div>
       {/* our team section */}
 
-      {/* service details */}
-      <div>
-        <ServiceDetails />
-      </div>
-      {/* service details */}
+ 
 
     </div>
 
