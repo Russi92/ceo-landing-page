@@ -181,10 +181,10 @@ export default function Services({ dict }: { dict: any }) {
                     ))}
               </ul>
 
-              <a href="/advantage/service-details" className="text-black border
+              <Link href="/advantage/service-details" className="text-black border
               hover:bg-primary hover:text-black border-gray-400 px-4 py-2 rounded-lg mt-auto">
                 {isArabic ? dict.services_button_ar : dict.services_button}
-              </a>
+              </Link>
             </div>
           ))}
         </div>
