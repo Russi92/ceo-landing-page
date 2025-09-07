@@ -6,7 +6,8 @@ import Pricing from "@/app/[lang]/pricing/Pricing";
 import Partners from "@/app/[lang]/partners/Partners";
 import PartnersTools from "@/app/[lang]/partners2/PartnersTools";
 import OurTeam from "@/app/[lang]/ourTeam/Partners";
-import OurTeamCompany from "@/app/[lang]/ourTeamCompany/Partners"
+import OurTeamCompany from "@/app/[lang]/ourTeamCompany/Partners";
+import Jobs from "@/app/[lang]/jobs/Jobs"
 
 import { ParamsLocale, SupportedLocales } from '@/types/globals';
 import { getDictionary } from "@/lib/utils/dictionary";
@@ -53,6 +54,12 @@ export default async function Home({
       </div>
       {/* Pricing section */}
 
+      {/* Services section */}
+      <div>
+      <Jobs dict={dict}/>
+      </div>
+      {/* Services section */}
+
       {/* Partners section */}
       <div>
       <Partners dict={dict}/>
@@ -72,8 +79,6 @@ export default async function Home({
       <OurTeamCompany dict={dict} title="" />
       </div>
       {/* our team section */}
-
- 
 
     </div>
 

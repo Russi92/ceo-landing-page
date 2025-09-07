@@ -56,6 +56,41 @@
       "هذا هو الوصف الثالث للبطاقة 1."
     ],
 
+    "jobs_title_ar" : "الوظائف",
+    "jobs_card_title_ar" : [
+      "FrontEnd",
+      "FrontEnd",
+      "BackEnd",
+      "Mobile Developer",
+      "BackEnd",
+      "Cyber Security"
+    ],
+    "jobs_description_title_ar" :"وصف الوظيفة",
+    "jobs_description_ar": [
+      "بناء واجهات المستخدم باستخدام React.js وتقنيات الويب الحديثة.",
+      "بناء واجهات المستخدم باستخدام React.js وتقنيات الويب الحديثة.",
+      "إنشاء واجهات برمجية (APIs) والتعامل مع منطق الخادم باستخدام إطار عمل Laravel بلغة PHP.",
+      "تطوير تطبيقات الهواتف الذكية لأنظمة iOS و Android باستخدام Flutter.",
+      "إنشاء واجهات برمجية (APIs) والتعامل مع منطق الخادم باستخدام إطار عمل Laravel بلغة PHP.",
+      "حماية الأنظمة والشبكات من التهديدات ونقاط الضعف الإلكترونية."
+    ],
+    "jobs_title_tools_ar" :"الخبرات والمهارات المطلوبة",
+    "jobs_tools_ar": [
+      "React.js", "JavaScript (ES6+)", "HTML5/CSS3", "Redux/Context", "REST API", "Git",
+      "Next.js", "React.js", "SSR/SSG", "TypeScript", "SEO",
+      "PHP", "Laravel", "MySQL/PostgreSQL", "MVC", "REST API", "Auth",
+      "Flutter", "Dart", "Mobile UI/UX", "REST API", "Firebase", "App Deployment",
+      "C#", "ASP.NET Core", "SQL Server", "Entity Framework", "Web API", "Azure",
+      "Network Security", "Firewalls", "PenTesting", "Cryptography", "SIEM", "GDPR/ISO"
+    ],
+
+    "jobs_button_ar": "تقديم للوظيفة",
+    "jobs_more_button_ar": "المزيد",
+    "jobs_show_slider_button_ar": "إظهار أقل",
+    
+    
+    
+
 
   
     "pricing_title_ar": "خطط الأسعار",

@@ -1,6 +1,5 @@
 
 
-
 "use client";
 
 import Image from 'next/image'
@@ -55,7 +54,7 @@ export default function Partners({ dict, title }: { dict: any , title: string}) 
 
 
     return (
-        <section className='mb-10 mt-20' dir='ltr' id='team'>
+        <section className='mb-10 ' dir='ltr' id='team'>
 
             <h3 className='text-center text-5xl text-primary mb-10'>
                {title}
@@ -68,10 +67,10 @@ export default function Partners({ dict, title }: { dict: any , title: string}) 
                 <div className="absolute top-0 right-0 h-full w-[5%] z-10"></div>
 
                 {/* Scrolling wrapper */}
-                <div className="flex w-max animate-scroll-tools gap-40 p-6 pause-on-hover-ceo-team">
+                <div className="flex w-max animate-scroll-tools gap-16 sm:gap-40 p-6 pause-on-hover-ceo-team">
                     {partners.concat(partners).map((p , index) => (
                      <div 
-                     className='flex flex-col items-center justify-center p-4 rounded-lg w-60 h-60 flex-shrink-0 border-card' 
+                     className='flex flex-col items-center justify-center p-4 rounded-lg w-48 h-48 sm:w-60 sm:h-60 flex-shrink-0 border-card' 
                      key={index}
                  >
                    
@@ -80,12 +79,12 @@ export default function Partners({ dict, title }: { dict: any , title: string}) 
                                 alt={p.name}
                                 width={100}
                                 height={100}
-                                className="object-contain mb-2 rounded-2xl"
+                                className="object-contain mb-2 rounded-2xl w-24 h-24 sm:w-28 sm:h-28"
                             />
-                            <h4 className='text-gray-500 font-bold text-lg text-center'>
+                            <h4 className='text-gray-500 font-bold text-base sm:text-lg text-center'>
                                 {p.title}
                             </h4>
-                            <p className='text-black text-sm text-center'>
+                            <p className='text-black text-xs sm:text-sm text-center'>
                                 {p.position}
                             </p>
                         

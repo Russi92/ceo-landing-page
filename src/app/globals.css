@@ -83,6 +83,7 @@
 
 .border-card{
   transition: all 0.3s ease ,filter 0.3s ease, border 0.3s ease;
+  border: 2px solid #FFCC00;
 }
 
 .border-card:hover{

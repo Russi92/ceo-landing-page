@@ -49,6 +49,39 @@
       "This is the third definition for card 1.",
       "This is the third definition for card 1."
     ],
+
+    "jobs_title" : "Jobs",
+    "jobs_card_title" : [
+      "FrontEnd",
+      "FrontEnd",
+      "BackEnd",
+      "Mobile Developer",
+      "BackEnd",
+      "Cyber Security"
+    ],
+    "jobs_description_title" :"Job Description",
+    "jobs_description": [
+      "Building user interfaces with React.js and modern web technologies.",
+      "Building user interfaces with React.js and modern web technologies.",
+      "Creating APIs and handling server-side logic with PHP Laravel framework.",
+      "Building cross-platform mobile apps for iOS and Android using Flutter.",
+      "Creating APIs and handling server-side logic with PHP Laravel framework.",
+      "Protecting systems and networks from cyber threats and vulnerabilities."
+    ],
+    "jobs_title_tools" :"The required experiences and skills",
+    "jobs_tools": [
+      "React.js", "JavaScript (ES6+)", "HTML5/CSS3", "Redux/Context", "REST API", "Git",
+      "Next.js", "React.js", "SSR/SSG", "TypeScript", "SEO",
+      "PHP", "Laravel", "MySQL/PostgreSQL", "MVC", "REST API", "Auth",
+      "C#", "ASP.NET Core", "SQL Server", "Entity Framework", "Web API", "Azure",
+      "Flutter", "Dart", "Mobile UI/UX", "REST API", "Firebase", "App Deployment",
+      "Network Security", "Firewalls", "PenTesting", "Cryptography", "SIEM", "GDPR/ISO"
+    ],
+    "jobs_button": "Apply Now",
+    "jobs_more_button": "More",
+    "jobs_show_slider_button": "Show Slider",
+
+
   
     "pricing_title": "Pricing Plans",
     "pricing_subtitle": {
