@@ -151,7 +151,7 @@ export default function NavBar({ dict }: { dict: any }) {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="text-white md:hidden flex flex-col items-center py-4 space-y-4 bg-secondary shadow-lg">
+          <div className="md:hidden flex flex-col items-center py-4 space-y-4 shadow-lg font-bold text-black">
             <ScrollLink to="home" smooth duration={800} offset={-70} onClick={() => setMenuOpen(false)}>
               {dict.navbar_home}
             </ScrollLink>
@@ -184,7 +184,7 @@ export default function NavBar({ dict }: { dict: any }) {
             </Link>
             <Link
               href="#"
-              className="p-2 rounded bg-transparent border-2 border-[#FFCC00] text-[#FFCC00] hover:bg-[#FFCC00] hover:text-black w-32 text-center
+              className="p-2 rounded bg-transparent border-2 border-[#FFCC00] text-black hover:bg-[#FFCC00] hover:text-black w-32 text-center
               font-extrabold transition-all duration-300 ease-in-out"
             >
               {isArabic ? dict.navbar_register_ar : dict.navbar_register}
