@@ -979,7 +979,7 @@ export default function Features({ dict }: { dict: any }) {
               <SwiperSlide key={feature.id}>
                 <div className="w-full bg-[#f8e3b2] shadow-md text-secondary rounded-3xl p-5 sm:p-10 flex flex-col gap-5 hover:scale-105 transition-all duration-700 h-[350px] overflow-hidden">
                   
-                  {/* هذا الجزء تم تعديله */}
+                  
                   <div className="flex flex-col items-center gap-3">
                     <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 text-slate-900">
                       <Image
@@ -1001,7 +1001,7 @@ export default function Features({ dict }: { dict: any }) {
                       </p>
                     </div>
                   </div>
-                  {/* نهاية الجزء المعدل */}
+                 
                   
                   <div className="mt-auto">
                     <ul className="list-disc list-inside text-sm mb-3">
