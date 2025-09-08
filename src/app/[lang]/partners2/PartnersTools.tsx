@@ -136,13 +136,19 @@
 "use client";
 
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
+import { useParams } from "next/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
-export default function PartnersTools() {
+export default function PartnersTools({ dict }: { dict: any }) {
+
+    const { lang } = useParams() as { lang?: string };
+    const isArabic = lang === "ar";
+
 
     const swiperRef = useRef<SwiperType | null>(null);
 
@@ -278,18 +284,22 @@ export default function PartnersTools() {
                 
                 {/* أزرار التنقل */}
                 <button
-                    onClick={() => swiperRef.current?.slidePrev()}
-                    className="absolute top-1/2 transform -translate-y-1/2 z-10 text-gray-500 rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold -left-2 sm:-left-4 md:-left-12"
-                >
-                    {"<"}
-                </button>
+    onClick={() => swiperRef.current?.slidePrev()}
+    className="absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+    left-2 sm:left-4 md:-left-12
+    bg-[#f1daa5] text-black rounded-full shadow-md"
+>
+<FaChevronLeft />
+</button>
 
-                <button
-                    onClick={() => swiperRef.current?.slideNext()}
-                    className="absolute top-1/2 transform -translate-y-1/2 z-10 text-gray-500 rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold -right-2 sm:-right-4 md:-right-12"
-                >
-                    {">"}
-                </button>
+<button
+    onClick={() => swiperRef.current?.slideNext()}
+    className="absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+    right-2 sm:right-4 md:-right-12
+    bg-[#f1daa5] text-black rounded-full shadow-md"
+>
+<FaChevronRight />
+</button>
             </div>
         </section>
     )

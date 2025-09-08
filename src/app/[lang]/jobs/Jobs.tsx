@@ -177,8 +177,8 @@
 //                   </h4>
 
 //                   <div
-//                     className={`text-gray-500 text-sm sm:text-base w-full 
-//                                 overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar 
+//                     className={`text-gray-500 text-sm sm:text-base w-full
+//                                 overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar
 //                     ${isArabic ? "text-right" : "text-left"}`}
 //                   >
 //                     <p>
@@ -227,7 +227,7 @@
 
 //                   <Link
 //                     href="/"
-//                     className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-3 
+//                     className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-3
 //                         hover:bg-primary hover:text-black transition duration-300"
 //                   >
 //                     {isArabic ? dict.jobs_button_ar : dict.jobs_button}
@@ -352,7 +352,6 @@
 //     </section>
 //   );
 // }
-
 
 // "use client";
 
@@ -511,7 +510,7 @@
 //             {cards.map((card) => (
 //               <SwiperSlide key={card.id}>
 //                 <div className="shadow-md rounded-lg overflow-hidden flex flex-col items-center text-center bg-[#f1daa5] h-[580px]">
-                 
+
 //                   <div className="relative w-full h-60 rounded-md overflow-hidden">
 //                     <Image
 //                       fill
@@ -520,9 +519,7 @@
 //                       className="object-cover"
 //                     />
 //                   </div>
-                
-                  
-                 
+
 //                   <div className="flex flex-col flex-grow w-full">
 //                     <h3 className="text-lg font-bold mt-4 text-gray-500">
 //                         {isArabic
@@ -537,8 +534,8 @@
 //                     </h4>
 
 //                     <div
-//                         className={`text-gray-500 text-sm sm:text-base w-full 
-//                                     overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar 
+//                         className={`text-gray-500 text-sm sm:text-base w-full
+//                                     overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar
 //                         ${isArabic ? "text-right" : "text-left"}`}
 //                     >
 //                         <p>
@@ -585,11 +582,10 @@
 //                         </div>
 //                     </div>
 //                   </div>
-                 
 
 //                   <Link
 //                     href="/"
-//                     className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-3 
+//                     className="text-gray-500 border border-gray-400 font-bold px-4 py-2 rounded-lg mt-3
 //                         hover:bg-primary hover:text-black transition duration-300 mb-4"
 //                   >
 //                     {isArabic ? dict.jobs_button_ar : dict.jobs_button}
@@ -630,7 +626,7 @@
 //               key={card.id}
 //               className="shadow-md rounded-lg overflow-hidden p-4 flex flex-col items-center text-center bg-[#f1daa5] h-[580px]"
 //             >
-          
+
 //               <div className="relative w-full h-60 rounded-md overflow-hidden">
 //                 <Image
 //                   fill
@@ -639,9 +635,7 @@
 //                   className="object-cover"
 //                 />
 //               </div>
-              
-              
-             
+
 //               <div className="flex flex-col flex-grow w-full">
 //                 <h3 className="text-lg font-bold mt-4 text-gray-500">
 //                     {isArabic
@@ -656,8 +650,8 @@
 //                 </h4>
 
 //                 <div
-//                     className={`text-gray-500 text-sm sm:text-base w-full 
-//                                 overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar 
+//                     className={`text-gray-500 text-sm sm:text-base w-full
+//                                 overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar
 //                     ${isArabic ? "text-right" : "text-left"}`}
 //                 >
 //                     <p>
@@ -700,7 +694,6 @@
 //                     </div>
 //                 </div>
 //               </div>
-          
 
 //               <Link
 //                 href="/"
@@ -742,6 +735,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import Link from "next/link";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function Services({ dict }: { dict: any }) {
   const [showGrid, setShowGrid] = useState(false);
@@ -889,7 +883,6 @@ export default function Services({ dict }: { dict: any }) {
             {cards.map((card) => (
               <SwiperSlide key={card.id}>
                 <div className="shadow-md rounded-lg overflow-hidden flex flex-col items-center text-center bg-[#f1daa5] h-[580px]">
-                 
                   <div className="relative w-full h-60 rounded-md overflow-hidden">
                     <Image
                       fill
@@ -898,73 +891,70 @@ export default function Services({ dict }: { dict: any }) {
                       className="object-cover"
                     />
                   </div>
-                
-                  
-                 
+
                   {/* تم إضافة px-4 هنا */}
                   <div className="flex flex-col flex-grow w-full px-4">
                     <h3 className="text-lg font-bold mt-4 text-gray-500">
-                        {isArabic
+                      {isArabic
                         ? dict.jobs_card_title_ar[card.id - 1]
                         : dict.jobs_card_title[card.id - 1]}
                     </h3>
 
                     <h4 className="font-semibold text-sm mt-2">
-                        {isArabic
+                      {isArabic
                         ? dict.jobs_description_title_ar
                         : dict.jobs_description_title}
                     </h4>
 
                     <div
-                        className={`text-gray-500 text-sm sm:text-base w-full 
+                      className={`text-gray-500 text-sm sm:text-base w-full 
                                     overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar 
                         ${isArabic ? "text-right" : "text-left"}`}
                     >
-                        <p>
+                      <p>
                         {isArabic
-                            ? dict.jobs_description_ar[card.id - 1]
-                            : dict.jobs_description[card.id - 1]}
-                        </p>
+                          ? dict.jobs_description_ar[card.id - 1]
+                          : dict.jobs_description[card.id - 1]}
+                      </p>
                     </div>
 
                     <div className="mt-1 text-sm text-gray-600">
-                        <h4 className="font-semibold mb-1">
+                      <h4 className="font-semibold mb-1">
                         {isArabic ? "المهارات المطلوبة:" : "Required Skills:"}
-                        </h4>
-                        <div
+                      </h4>
+                      <div
                         className={` ${isArabic ? "text-right" : "text-left"}`}
-                        >
+                      >
                         {card.tools.map((tool, i) => (
-                            <span key={i}>{tool}</span>
+                          <span key={i}>{tool}</span>
                         ))}
-                        </div>
+                      </div>
                     </div>
 
                     <div className="mt-3 flex justify-between items-center w-full text-sm text-gray-700">
-                        <div>
+                      <div>
                         {isArabic ? " الراتب: " : "Salary:"} {card.salary}
-                        </div>
-                        <div>
+                      </div>
+                      <div>
                         {isArabic ? " العدد المطلوب: " : "Vacancies:"}{" "}
                         {card.vacancies}
-                        </div>
+                      </div>
                     </div>
 
                     <div className="mt-2 w-full text-sm text-gray-600 ">
-                        <div>
+                      <div>
                         {isArabic ? " فترة الإعلان:" : " Announcement Period:"}
-                        </div>
-                        <div className="flex justify-between">
+                      </div>
+                      <div className="flex justify-between">
                         <span>
-                            {isArabic ? "من: " : "From:"} {card.startDate}
+                          {isArabic ? "من: " : "From:"} {card.startDate}
                         </span>
                         <span>
-                            {isArabic ? "إلى: " : "To:"} {card.endDate}
+                          {isArabic ? "إلى: " : "To:"} {card.endDate}
                         </span>
-                        </div>
+                      </div>
                     </div>
                   </div>
-                 
 
                   <Link
                     href="/"
@@ -980,24 +970,29 @@ export default function Services({ dict }: { dict: any }) {
 
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
-              isArabic
-                ? "right-2 sm:right-4 md:-right-12"
-                : "left-2 sm:left-4 md:-left-12"
-            }`}
+            className="absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold left-2 sm:left-4 md:-left-12 bg-[#f1daa5] text-black rounded-full shadow-md"
           >
-            {"<"}
+            <FaChevronLeft />
           </button>
 
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
+            className="absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold right-2 sm:right-4 md:-right-12 bg-[#f1daa5] text-black rounded-full shadow-md"
+          >
+            <FaChevronRight />
+          </button>
+
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className={`absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+            right-2 sm:right-4 md:-right-12
+            bg-[#f1daa5] text-black rounded-full shadow-md ${
               isArabic
                 ? "left-2 sm:left-4 md:-left-12"
                 : "right-2 sm:right-4 md:-right-12"
             }`}
           >
-            {">"}
+            <FaChevronRight />
           </button>
         </div>
       )}
@@ -1009,7 +1004,6 @@ export default function Services({ dict }: { dict: any }) {
               key={card.id}
               className="shadow-md rounded-lg overflow-hidden flex flex-col items-center text-center bg-[#f1daa5] h-[580px]"
             >
-          
               <div className="relative w-full h-60 rounded-md overflow-hidden">
                 <Image
                   fill
@@ -1018,69 +1012,68 @@ export default function Services({ dict }: { dict: any }) {
                   className="object-cover"
                 />
               </div>
-              
-              
-             
+
               {/* تم إضافة px-4 هنا أيضًا */}
               <div className="flex flex-col flex-grow w-full px-4">
                 <h3 className="text-lg font-bold mt-4 text-gray-500">
-                    {isArabic
+                  {isArabic
                     ? dict.jobs_card_title_ar[card.id - 1]
                     : dict.jobs_card_title[card.id - 1]}
                 </h3>
 
                 <h4 className="font-semibold text-sm mt-2">
-                    {isArabic
+                  {isArabic
                     ? dict.jobs_description_title_ar
                     : dict.jobs_description_title}
                 </h4>
 
                 <div
-                    className={`text-gray-500 text-sm sm:text-base w-full 
+                  className={`text-gray-500 text-sm sm:text-base w-full 
                                 overflow-y-auto max-h-[12rem] pr-2 custom-scrollbar 
                     ${isArabic ? "text-right" : "text-left"}`}
                 >
-                    <p>
+                  <p>
                     {isArabic
-                        ? dict.jobs_description_ar[card.id - 1]
-                        : dict.jobs_description[card.id - 1]}
-                    </p>
+                      ? dict.jobs_description_ar[card.id - 1]
+                      : dict.jobs_description[card.id - 1]}
+                  </p>
                 </div>
 
                 <div className="mt-1 text-sm text-gray-600">
-                    <h4 className="font-semibold mb-1">
+                  <h4 className="font-semibold mb-1">
                     {isArabic ? "المهارات المطلوبة:" : "Required Skills:"}
-                    </h4>
-                    <div className={` ${isArabic ? "text-right" : "text-left"}`}>
+                  </h4>
+                  <div className={` ${isArabic ? "text-right" : "text-left"}`}>
                     {card.tools.map((tool, i) => (
-                        <span key={i}>{tool}</span>
+                      <span key={i}>{tool}</span>
                     ))}
-                    </div>
+                  </div>
                 </div>
 
                 <div className="mt-3 flex justify-between items-center w-full text-sm text-gray-700 ">
-                    <div>
+                  <div>
                     {isArabic ? " الراتب: " : "Salary:"} {card.salary}
-                    </div>
-                    <div>
+                  </div>
+                  <div>
                     {isArabic ? " العدد المطلوب: " : "Vacancies:"}{" "}
                     {card.vacancies}
-                    </div>
+                  </div>
                 </div>
 
                 <div className="mt-2 w-full text-sm text-gray-600 ">
-                    <div>{isArabic ? " فترة الإعلان:" : " Announcement Period:"}</div>
-                    <div className="flex justify-between">
+                  <div>
+                    {isArabic ? " فترة الإعلان:" : " Announcement Period:"}
+                  </div>
+                  <div className="flex justify-between">
                     <span>
-                        {isArabic ? "من: " : "From:"} {card.startDate}
+                      {isArabic ? "من: " : "From:"} {card.startDate}
                     </span>
                     <span>
-                        {isArabic ? "إلى: " : "To:"} {card.endDate}
+                      {isArabic ? "إلى: " : "To:"} {card.endDate}
                     </span>
-                    </div>
+                  </div>
                 </div>
               </div>
-          
 
               <Link
                 href="/"

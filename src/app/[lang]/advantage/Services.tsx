@@ -9,6 +9,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import Link from "next/link";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function Services({ dict }: { dict: any }) {
   const [showGrid, setShowGrid] = useState(false);
@@ -125,24 +126,24 @@ export default function Services({ dict }: { dict: any }) {
 
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
-              isArabic
-                ? "right-2 sm:right-4 md:-right-12"
-                : "left-2 sm:left-4 md:-left-12"
-            }`}
+            className={`absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+            left-2 sm:left-4 md:-left-12
+            bg-[#f1daa5] text-black rounded-full shadow-md`}
           >
-            {"<"}
+            <FaChevronLeft />
           </button>
 
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-black rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
+            className={`absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+            right-2 sm:right-4 md:-right-12
+            bg-[#f1daa5] text-black rounded-full shadow-md ${
               isArabic
                 ? "left-2 sm:left-4 md:-left-12"
                 : "right-2 sm:right-4 md:-right-12"
             }`}
           >
-            {">"}
+            <FaChevronRight />
           </button>
         </div>
       )}

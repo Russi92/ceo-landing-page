@@ -90,6 +90,8 @@ import { useParams } from "next/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 
 
 
@@ -135,11 +137,7 @@ export default function Partners({ dict }: { dict: any }) {
             url : "https://business.sa/",
             imgSrc: "/images/partners/saudi1.svg"
         },
-        {
-            name : "digital3",
-            url : "https://www.mcit.gov.sa/",
-            imgSrc: "/images/partners/digital3.svg"
-        },
+
     ]
 
 
@@ -175,7 +173,7 @@ export default function Partners({ dict }: { dict: any }) {
                                     alt={p.name}
                                     width={100}
                                     height={100}
-                                    className="object-contain cursor-pointer mx-auto bg-[#f1daa5] rounded-xl p-2 flex h-[80px] w-[200px]
+                                    className="cursor-pointer mx-auto bg-[#f1daa5] rounded-xl p-1 flex h-[80px] w-[200px]
                                     transition-all duration-300 ease-in-out transform hover:-translate-x-1 hover:scale-105 hover:shadow-md"
                                 />
                             </a>
@@ -183,23 +181,23 @@ export default function Partners({ dict }: { dict: any }) {
                     ))}
                 </Swiper>
                 
-                {/* أزرار التنقل */}
+               
                 <button
                     onClick={() => swiperRef.current?.slidePrev()}
-                    className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-gray-500 rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
-                        isArabic ? "right-2 sm:right-4 md:-right-12" : "left-2 sm:left-4 md:-left-12"
-                    }`}
+                    className="absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+                            left-2 sm:left-4 md:-left-12
+                            bg-[#f1daa5] text-black rounded-full shadow-md"
                 >
-                    {"<"}
+                <FaChevronLeft />
                 </button>
 
                 <button
                     onClick={() => swiperRef.current?.slideNext()}
-                    className={`absolute top-1/2 transform -translate-y-1/2 z-10 text-gray-500 rounded-full w-12 h-12 flex items-center justify-center transition cursor-pointer font-bold ${
-                        isArabic ? "left-2 sm:left-4 md:-left-12" : "right-2 sm:right-4 md:-right-12"
-                    }`}
+                    className="absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+                                right-2 sm:right-4 md:-right-12
+                                bg-[#f1daa5] text-black rounded-full shadow-md"
                 >
-                    {">"}
+                    <FaChevronRight />
                 </button>
                     
             </div>
