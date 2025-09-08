@@ -326,6 +326,7 @@ export default function Partners({ dict, title }: { dict: any , title: string}) 
                     delay: 2000,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
+                    reverseDirection: true,
                 }}
                 breakpoints={{
                     640: { slidesPerView: 2, spaceBetween: 20, centeredSlides: true },
