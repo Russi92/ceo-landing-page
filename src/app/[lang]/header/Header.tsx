@@ -44,7 +44,7 @@ export default function Header({dict} : {dict: any}) {
           </h3>
 
 
-          <PrimaryButton>{dict.hero_button}</PrimaryButton>
+          <PrimaryButton >{dict.hero_button}</PrimaryButton>
         </div>
       </div>
     </div>

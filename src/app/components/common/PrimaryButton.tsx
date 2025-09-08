@@ -17,7 +17,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
     <button
       type={type}
       onClick={onClick}
-      className={`ring-2 ring-primary py-4 px-5 w-fit text-primary cursor-pointer text-xl font-bold mt-5 hover:bg-amber-300 hover:text-black transition-all duration-400 ease-in-out ${className}`}
+      className={`ring-2 ring-primary py-4 px-5 w-fit text-black cursor-pointer text-xl font-bold mt-5 hover:bg-amber-300 hover:text-black transition-all duration-400 ease-in-out ${className}`}
     >
       {children}
     </button>
