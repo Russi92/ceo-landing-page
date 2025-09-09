@@ -361,7 +361,7 @@ export default function Partners({
 
   return (
     <section className="mt-5" dir="ltr">
-      <h3 className="text-center text-5xl text-gray-500 mb-10 font-bold">
+      <h3 className="text-center text-xl sm:text-3xl md:text-4xl text-gray-500 mb-10 font-bold">
         {title}
       </h3>
 

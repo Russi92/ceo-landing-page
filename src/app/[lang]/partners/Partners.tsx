@@ -143,7 +143,7 @@ export default function Partners({ dict }: { dict: any }) {
 
     return (
         <section className='mb-10' dir='ltr'>
-            <h3 className='text-center text-5xl text-gray-500 font-bold mb-10'>{isArabic ? dict.partners_title_ar : dict.partners_title}</h3>
+            <h3 className='text-center text-xl sm:text-3xl md:text-4xl text-gray-500 font-bold mb-10'>{isArabic ? dict.partners_title_ar : dict.partners_title}</h3>
             
             <div className="relative w-full max-w-7xl mx-auto px-10">
                 <Swiper
