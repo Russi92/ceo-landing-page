@@ -889,6 +889,249 @@
 //   );
 // }
 
+
+
+
+
+
+// "use client";
+
+// import Image from "next/image";
+// import React, { useState, useRef } from "react";
+// import { useParams } from "next/navigation";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules";
+// import { Swiper as SwiperType } from "swiper";
+// import "swiper/css";
+// import Link from "next/link";
+// import { FaVideo, FaImage, FaFilePdf , FaChevronLeft , FaChevronRight } from "react-icons/fa";
+
+
+// export default function Features({ dict }: { dict: any }) {
+//   const [showGrid, setShowGrid] = useState(false);
+//   const swiperRef = useRef<SwiperType | null>(null);
+
+//   const { lang } = useParams() as { lang?: string };
+//   const isArabic = lang === "ar";
+  
+//   const features = [
+//     {
+//       id: 1,
+//       icon: "/images/features/project_management.png",
+//       title_ar: "إدارة المشروع",
+//       title_en: "Project Management",
+//       description_ar: "قم بالتخطيط للمشاريع وتنظيمها وتتبعها بكفاءة باستخدام المهام والمعالم وتحديثات التقدم في الوقت الفعلي.",
+//       description_en: "Plan, organize, and track projects efficiently with tasks, milestones, and real-time progress updates.",
+//     },
+//     {
+//       id: 2,
+//       icon: "/images/features/accounting.png",
+//       title_ar: "المحاسبة",
+//       title_en: "Accounting",
+//       description_ar: "قم بإدارة الفواتير والنفقات وكشوف الرواتب والتقارير المالية كلها في مكان واحد بكل سهولة.",
+//       description_en: "Manage invoices, expenses, payroll, and financial reports all in one place with ease.",
+//     },
+//     {
+//       id: 3,
+//       icon: "/images/features/hr.png",
+//       title_ar: "الموارد البشرية",
+//       title_en: "HR",
+//       description_ar: "تبسيط سجلات الموظفين، والحضور، والتوظيف، وتقييم الأداء.",
+//       description_en: "Streamline employee records, attendance, recruitment, and performance evaluations.",
+//     },
+//     {
+//       id: 4,
+//       icon: "/images/features/website_management.png",
+//       title_ar: "إدارة الموقع",
+//       title_en: "Website Management",
+//       description_ar: "يمكنك تحديث وإدارة محتوى موقع الويب والوسائط والتحليلات بسهولة دون أي متاعب تقنية.",
+//       description_en: "Easily update and manage website content, media, and analytics without technical hassle.",
+//     },
+//     {
+//       id: 5,
+//       icon: "/images/features/buffet.png",
+//       title_ar: "البوفيه",
+//       title_en: "Buffet",
+//       description_ar: "تنظيم قوائم الكافتيريا وإدارة الطلبات وتوفير خدمات الوجبات السلسة للموظفين.",
+//       description_en: "Organize cafeteria menus, manage orders, and provide employees with seamless meal services.",
+//     },
+//   ];
+
+//   return (
+//     <section>
+        
+//       {!showGrid && (
+//         <div className="relative w-full max-w-6xl mx-auto px-10">
+//           <Swiper
+//             modules={[Autoplay, Navigation]}
+//             onSwiper={(swiper) => (swiperRef.current = swiper)}
+//             autoplay={{
+//               delay: 2000,
+//               disableOnInteraction: false,
+//               pauseOnMouseEnter: true,
+//             }}
+//             loop={true}
+//             spaceBetween={20}
+//             slidesPerView={1}
+//             grabCursor={true}
+//             breakpoints={{
+//               640: { slidesPerView: 1 },
+//               768: { slidesPerView: 2 },
+//               1024: { slidesPerView: 3 },
+//             }}
+//             className="w-full"
+//           >
+//             {features.map((feature) => (
+//               <SwiperSlide key={feature.id}>
+//                 <div className="w-full bg-[#f8e3b2] shadow-md text-secondary rounded-3xl p-5 sm:p-10 flex flex-col gap-5 hover:scale-105 transition-all duration-700 h-[350px] overflow-hidden">
+                  
+                  
+//                   <div className="flex flex-col items-center gap-3">
+//                     <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 text-slate-900">
+//                       <Image
+//                         src={feature.icon}
+//                         alt={isArabic ? feature.title_ar : feature.title_en}
+//                         width={64}
+//                         height={64}
+//                         className="object-contain"
+//                       />
+//                     </div>
+//                     <div>
+//                       <h3 className="text-xl sm:text-xl md:text-shadow-md mb-3 text-secondary break-words text-center">
+//                         {isArabic ? feature.title_ar : feature.title_en}
+//                       </h3>
+//                       <p className="text-sm sm:text-base text-center">
+//                         {isArabic
+//                           ? feature.description_ar
+//                           : feature.description_en}
+//                       </p>
+//                     </div>
+//                   </div>
+                 
+                  
+//                   <div className="mt-auto">
+//                     <ul className="list-disc list-inside text-sm mb-3">
+//                       <li>
+//                         {isArabic
+//                           ? "معلومة إضافية عن الميزة"
+//                           : "Additional info about this feature"}
+//                       </li>
+//                     </ul>
+//                     <div className="flex gap-3">
+//                       <button className="p-2 rounded-full bg-red-600 text-white hover:opacity-80">
+//                         <FaVideo />
+//                       </button>
+//                       <button className="p-2 rounded-full bg-blue-600 text-white hover:opacity-80">
+//                         <FaImage />
+//                       </button>
+//                       <button className="p-2 rounded-full bg-green-600 text-white hover:opacity-80">
+//                         <FaFilePdf />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </SwiperSlide>
+//             ))}
+//           </Swiper>
+
+//           <button
+//             onClick={() => swiperRef.current?.slidePrev()}
+//             className={`absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+//             left-2 sm:left-4 md:-left-12
+//             bg-[#f1daa5] text-black rounded-full shadow-md
+//               `}
+//           >
+//             <FaChevronLeft />
+//           </button>
+
+//           <button
+//             onClick={() => swiperRef.current?.slideNext()}
+//             className={`absolute top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center transition cursor-pointer font-bold
+//             right-2 sm:right-4 md:-right-12
+//             bg-[#f1daa5] text-black rounded-full shadow-md`}
+//           >
+//             <FaChevronRight />
+//           </button>
+//         </div>
+//       )}
+
+//       {showGrid && (
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto px-4">
+//           {features.map((feature) => (
+//             <div
+//               key={feature.id}
+//               className="w-full bg-[#f8e3b2] shadow-md text-secondary rounded-3xl p-5 sm:p-10 flex flex-col gap-5 hover:scale-105 transition-all duration-700 h-[350px] overflow-hidden"
+//             >
+              
+//               {/* هذا الجزء تم تعديله */}
+//               <div className="flex flex-col items-center gap-3">
+//                 <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 text-slate-900">
+//                   <Image
+//                     src={feature.icon}
+//                     alt={isArabic ? feature.title_ar : feature.title_en}
+//                     width={64}
+//                     height={64}
+//                     className="object-contain"
+//                   />
+//                 </div>
+//                 <div>
+//                   <h3 className="text-xl sm:text-xl md:text-shadow-md mb-3 text-secondary break-words text-center">
+//                     {isArabic ? feature.title_ar : feature.title_en}
+//                   </h3>
+//                   <p className="text-sm sm:text-base text-center">
+//                     {isArabic
+//                       ? feature.description_ar
+//                       : feature.description_en}
+//                   </p>
+//                 </div>
+//               </div>
+//               {/* نهاية الجزء المعدل */}
+              
+//               <div className="mt-4">
+//                 <ul className="list-disc list-inside text-sm mb-3">
+//                   <li>
+//                     {isArabic
+//                       ? "معلومة إضافية عن الميزة"
+//                       : "Additional info about this feature"}
+//                   </li>
+//                 </ul>
+//                 <div className="flex gap-3">
+//                   <button className="p-2 rounded-full bg-red-600 text-white hover:opacity-80">
+//                     <FaVideo />
+//                   </button>
+//                   <button className="p-2 rounded-full bg-blue-600 text-white hover:opacity-80">
+//                     <FaImage />
+//                   </button>
+//                   <button className="p-2 rounded-full bg-green-600 text-white hover:opacity-80">
+//                     <FaFilePdf />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       )}
+
+//       <div className="text-center mt-10">
+//         <button
+//           onClick={() => setShowGrid((prev) => !prev)}
+//           className="text-gray-500 font-bold underline text-lg cursor-pointer"
+//         >
+//           {showGrid
+//             ? isArabic
+//               ? "عرض الشريط المتحرك"
+//               : "Show as Slider"
+//             : isArabic
+//             ? "المزيد"
+//             : "More"}
+//         </button>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
 "use client";
 
 import Image from "next/image";
@@ -903,8 +1146,16 @@ import { FaVideo, FaImage, FaFilePdf , FaChevronLeft , FaChevronRight } from "re
 
 
 export default function Features({ dict }: { dict: any }) {
+
   const [showGrid, setShowGrid] = useState(false);
+
   const swiperRef = useRef<SwiperType | null>(null);
+  
+  const [showImagePopup, setShowImagePopup] = useState(false);
+
+  const [showVideoPopup, setShowVideoPopup] = useState(false);
+
+  const [popupMediaUrl, setPopupMediaUrl] = useState("");
 
   const { lang } = useParams() as { lang?: string };
   const isArabic = lang === "ar";
@@ -917,6 +1168,9 @@ export default function Features({ dict }: { dict: any }) {
       title_en: "Project Management",
       description_ar: "قم بالتخطيط للمشاريع وتنظيمها وتتبعها بكفاءة باستخدام المهام والمعالم وتحديثات التقدم في الوقت الفعلي.",
       description_en: "Plan, organize, and track projects efficiently with tasks, milestones, and real-time progress updates.",
+      imageUrl : "/images/c.png", 
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+      pdfUrl: "/assets/sample.pdf", 
     },
     {
       id: 2,
@@ -925,6 +1179,9 @@ export default function Features({ dict }: { dict: any }) {
       title_en: "Accounting",
       description_ar: "قم بإدارة الفواتير والنفقات وكشوف الرواتب والتقارير المالية كلها في مكان واحد بكل سهولة.",
       description_en: "Manage invoices, expenses, payroll, and financial reports all in one place with ease.",
+      imageUrl : "/images/c.png", 
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+      pdfUrl: "/assets/sample.pdf",
     },
     {
       id: 3,
@@ -933,6 +1190,9 @@ export default function Features({ dict }: { dict: any }) {
       title_en: "HR",
       description_ar: "تبسيط سجلات الموظفين، والحضور، والتوظيف، وتقييم الأداء.",
       description_en: "Streamline employee records, attendance, recruitment, and performance evaluations.",
+      imageUrl : "/images/c.png", 
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+      pdfUrl: "/assets/sample.pdf",
     },
     {
       id: 4,
@@ -941,6 +1201,9 @@ export default function Features({ dict }: { dict: any }) {
       title_en: "Website Management",
       description_ar: "يمكنك تحديث وإدارة محتوى موقع الويب والوسائط والتحليلات بسهولة دون أي متاعب تقنية.",
       description_en: "Easily update and manage website content, media, and analytics without technical hassle.",
+      imageUrl : "/images/c.png", 
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+      pdfUrl: "/assets/sample.pdf",
     },
     {
       id: 5,
@@ -949,8 +1212,27 @@ export default function Features({ dict }: { dict: any }) {
       title_en: "Buffet",
       description_ar: "تنظيم قوائم الكافتيريا وإدارة الطلبات وتوفير خدمات الوجبات السلسة للموظفين.",
       description_en: "Organize cafeteria menus, manage orders, and provide employees with seamless meal services.",
+      imageUrl : "/images/c.png", 
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+      pdfUrl: "/assets/sample.pdf",
     },
   ];
+
+  const handleImageClick = (url: string) => {
+    setPopupMediaUrl(url);
+    setShowImagePopup(true);
+  };
+
+  const handleVideoClick = (url: string) => {
+    setPopupMediaUrl(url);
+    setShowVideoPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowImagePopup(false);
+    setShowVideoPopup(false);
+    setPopupMediaUrl("");
+  };
 
   return (
     <section>
@@ -1012,16 +1294,25 @@ export default function Features({ dict }: { dict: any }) {
                           : "Additional info about this feature"}
                       </li>
                     </ul>
-                    <div className="flex gap-3">
-                      <button className="p-2 rounded-full bg-red-600 text-white hover:opacity-80">
+                    <div className="flex gap-3 justify-center">
+                     
+                      <button 
+                        className="p-2 rounded-full bg-red-600 text-white hover:opacity-80"
+                        onClick={() => handleVideoClick(feature.videoUrl)}
+                      >
                         <FaVideo />
                       </button>
-                      <button className="p-2 rounded-full bg-blue-600 text-white hover:opacity-80">
+                     
+                      <button 
+                        className="p-2 rounded-full bg-blue-600 text-white hover:opacity-80"
+                        onClick={() => handleImageClick(feature.imageUrl)}
+                      >
                         <FaImage />
                       </button>
-                      <button className="p-2 rounded-full bg-green-600 text-white hover:opacity-80">
+                      
+                      <a href={feature.pdfUrl} download className="p-2 rounded-full bg-green-600 text-white hover:opacity-80 flex items-center justify-center">
                         <FaFilePdf />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1091,15 +1382,24 @@ export default function Features({ dict }: { dict: any }) {
                   </li>
                 </ul>
                 <div className="flex gap-3">
-                  <button className="p-2 rounded-full bg-red-600 text-white hover:opacity-80">
+                  {/* ✅ تعديل الزرار لفتح الفيديو */}
+                  <button 
+                    className="p-2 rounded-full bg-red-600 text-white hover:opacity-80"
+                    onClick={() => handleVideoClick(feature.videoUrl)}
+                  >
                     <FaVideo />
                   </button>
-                  <button className="p-2 rounded-full bg-blue-600 text-white hover:opacity-80">
+                  {/* ✅ تعديل الزرار لفتح الصورة */}
+                  <button 
+                    className="p-2 rounded-full bg-blue-600 text-white hover:opacity-80"
+                    onClick={() => handleImageClick(feature.imageUrl)}
+                  >
                     <FaImage />
                   </button>
-                  <button className="p-2 rounded-full bg-green-600 text-white hover:opacity-80">
+                  {/* ✅ تعديل الزرار لتحميل الملف */}
+                  <a href={feature.pdfUrl} download className="p-2 rounded-full bg-green-600 text-white hover:opacity-80 flex items-center justify-center">
                     <FaFilePdf />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1110,7 +1410,7 @@ export default function Features({ dict }: { dict: any }) {
       <div className="text-center mt-10">
         <button
           onClick={() => setShowGrid((prev) => !prev)}
-          className="text-gray-500 font-bold underline text-lg"
+          className="text-gray-500 font-bold underline text-lg cursor-pointer"
         >
           {showGrid
             ? isArabic
@@ -1121,6 +1421,61 @@ export default function Features({ dict }: { dict: any }) {
             : "More"}
         </button>
       </div>
+
+      {/* Popups */}
+      {showImagePopup && (
+        <div 
+          className="fixed inset-0 bg-white/70 bg-opacity-75 z-50 flex items-center justify-center p-4"
+          onClick={closePopup}
+        >
+          <div 
+            className="max-w-full md:max-w-4xl max-h-full overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={popupMediaUrl}
+              alt="Popup Image"
+              width={500}
+              height={500}
+              className="w-full h-auto object-contain rounded-lg"
+            />
+            <button
+              onClick={closePopup}
+              className="absolute top-2 right-2 text-white cursor-pointer text-xl font-bold bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+
+      {showVideoPopup && (
+        <div 
+          className="fixed inset-5 bg-white/70 bg-opacity-75 z-50 flex items-center justify-center p-4"
+          onClick={closePopup}
+        >
+          <div 
+            className="w-full max-w-4xl h-auto"
+            style={{ paddingTop: '56.25%' }} 
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-lg"
+              src={popupMediaUrl}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+            <button
+              onClick={closePopup}
+              className="absolute top-2 right-2 text-white cursor-pointer text-xl font-bold bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+
     </section>
   );
 }

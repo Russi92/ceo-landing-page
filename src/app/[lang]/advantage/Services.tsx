@@ -194,7 +194,7 @@ export default function Services({ dict }: { dict: any }) {
       <div className="text-center">
         <button
           onClick={() => setShowGrid((prev) => !prev)}
-          className="text-gray-500 font-bold underline text-lg"
+          className="text-gray-500 font-bold underline text-lg cursor-pointer"
         >
           {showGrid
             ? isArabic
