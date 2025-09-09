@@ -3,12 +3,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useParams } from "next/navigation";
 
-export default function BuyServiceDetails({ dict }: { dict: any }) {
+export default function BuyServiceDetails() {
 
-  const { lang } = useParams() as { lang?: string };
-  const isArabic = lang === "ar";
+
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen ">
