@@ -3,8 +3,13 @@
 'use client';
 
 import Image from 'next/image';
+import { useParams } from "next/navigation";
 
-export default function BuyServicePage() {
+export default function BuyServicePage({ dict }: { dict: any }) {
+
+  const { lang } = useParams() as { lang?: string };
+  const isArabic = lang === "ar";
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen ">
       <div className='font-extrabold mb-10 text-3xl sm:text-4xl lg:text-5xl text-center'>Service Details</div>
