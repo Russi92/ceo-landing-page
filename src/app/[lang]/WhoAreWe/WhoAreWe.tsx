@@ -260,11 +260,11 @@ export default function WhoAreWe({ dict }: { dict: any }) {
       {/* Popups */}
       {showImagePopup && (
         <div
-        className="fixed inset-0 bg-white/70 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-transparent backdrop-blur-lg z-50 flex items-center justify-center p-4"
         onClick={closePopup}
     >
           <div 
-            className="max-w-full md:max-w-4xl max-h-full overflow-y-auto"
+            className="max-w-full md:max-w-4xl max-h-full overflow-y-auto bg-white/80 p-10 rounded-md"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -286,7 +286,7 @@ export default function WhoAreWe({ dict }: { dict: any }) {
 
       {showVideoPopup && (
         <div 
-          className="fixed inset-5 bg-white/70 bg-opacity-75 z-50 flex items-center justify-center p-4"
+          className="fixed inset-5 bg-transparent backdrop-blur-lg bg-opacity-75 z-50 flex items-center justify-center p-4"
           onClick={closePopup}
         >
           <div 
