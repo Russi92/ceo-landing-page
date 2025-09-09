@@ -5,7 +5,7 @@
 import Image from 'next/image';
 import { useParams } from "next/navigation";
 
-export default function BuyServicePage({ dict }: { dict: any }) {
+export default function page({ dict }: { dict: any }) {
 
   const { lang } = useParams() as { lang?: string };
   const isArabic = lang === "ar";
