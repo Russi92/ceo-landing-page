@@ -46,15 +46,12 @@ export default function NavBar({ dict }: { dict: any }) {
 
           {/* Links - Desktop */}
           <div className="hidden md:flex text-gray-500">
-            <ScrollLink
-              to="home"
-              smooth
-              duration={800}
-              offset={-70}
+            <Link
+              href="/"
               className="me-4 font-extrabold transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"
             >
               {dict.navbar_home}
-            </ScrollLink>
+            </Link>
 
             <ScrollLink
               to="about"
